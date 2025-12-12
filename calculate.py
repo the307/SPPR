@@ -305,8 +305,7 @@ def CPPN_1 (
 # 37. Расчет наличия нефти в РВС ЦПС, т:
     V_upsv_cps = V_upsv_cps_prev
     if V_upsv_cps_prev - 1500 <= V_upsv_cps <= V_upsv_cps_prev + 1500:
-        in_3 = int(input("Введите корректное заначение для V_upsv_cps"))
-        V_upsv_cps = in_3
+        V_upsv_cps = int(input("Введите корректное заначение для V_upsv_cps"))
     if flag_list[2]:
         if V_upsv_cps_prev - 2000 <= V_upsv_cps <= V_upsv_cps_prev + 3300:
             print("f")
