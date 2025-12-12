@@ -169,7 +169,7 @@ def kchng(Q_kchng_day, Q_kchng):
 def lodochny(
     Q_tagul, Q_lodochny, V_upn_lodochny_prev, G_ichem, V_ichem_prev, G_lodochny_ichem,
     Q_tagul_prev_month, G_lodochni_upsv_yu_prev_month, K_otkachki, K_gupn_lodochny, N, Q_vo_day,
-    Q_lodochny_day, Q_tagul_day, V_tagul, V_tagul_prev, K_g_tagul, G_kchng,
+    Q_lodochny_day, Q_tagul_day, V_tagul, V_tagul_prev, K_g_tagul, G_kchng, day
 ):
     # Преобразование входных данных
     Q_tagul = np.array(Q_tagul, dtype=float)
@@ -216,7 +216,7 @@ def lodochny(
     list_g_lodochny_uspv_yu.append(G_lodochny_uspv_yu)
     G_lodochny_uspv_yu_month = sum(list_g_lodochny_uspv_yu)
     # --- 27 расчет откачки нефти
-    if N <= N-2:
+    if day <= N-2:
         G_sikn_tagul = round(G_lodochny_uspv_yu_month / N / 10) * 10
     else:
         value = round(G_lodochny_uspv_yu_month / N / 10) * 10
@@ -270,7 +270,7 @@ def lodochny(
 # ===============================================================
 def CPPN_1 (
     V_upsv_yu_prev, V_upsv_s_prev, V_upsv_cps_prev, V_upsv_yu_0, V_upsv_s_0, V_upsv_cps_0,
-    V_upsv_yu, V_upsv_s, V_upsv_cps, N, V_lodochny_cps_upsv_yu_prev, G_lodochni_upsv_yu,
+    V_upsv_yu, V_upsv_s, V_upsv_cps,  V_lodochny_cps_upsv_yu_prev, G_lodochni_upsv_yu,
     G_sikn_tagul, flag_list
 ):
     V_upsv_yu_prev=_to_float(V_upsv_yu_prev)
@@ -285,28 +285,28 @@ def CPPN_1 (
     V_lodochny_cps_upsv_yu_prev = _to_float(V_lodochny_cps_upsv_yu_prev)
     V_lodochni_upsv_yu = _to_float(G_lodochni_upsv_yu)
     G_sikn_tagul = _to_float(G_sikn_tagul)
-    N = int(N) if N else 1.0
 # 35. Расчет наличия нефти в РВС УПСВ-Юг, т:
     V_upsv_yu = V_upsv_yu_prev
-    if V_upsv_yu_prev-1500 <= V_upsv_yu <= V_upsv_yu_prev+1500:
-        in_3 = int(input("Введите корректное заначение для V_upsv_yu"))
-        V_upsv_yu = in_3
-    if flag_list[0]:
+    if not flag_list[0]:
+        if V_upsv_yu_prev-1500 <= V_upsv_yu <= V_upsv_yu_prev+1500:
+            V_upsv_yu = int(input("Введите корректное заначение для V_upsv_yu"))
+    else:
         if V_upsv_yu_prev-2000 <= V_upsv_yu <= V_upsv_yu_prev+4000:
             print("f")
 # 36. Расчет наличия нефти в РВС УПСВ-Север, т:
     V_upsv_s = V_upsv_s_prev
-    if V_upsv_s_prev-1500 <= V_upsv_s <= V_upsv_s_prev+1500:
-        in_3 = int(input("Введите корректное заначение для V_upsv_s"))
-        V_upsv_s = in_3
-    if flag_list[1]:
+    if not flag_list[1]:
+        if V_upsv_s_prev-1500 <= V_upsv_s <= V_upsv_s_prev+1500:
+            V_upsv_s = int(input("Введите корректное заначение для V_upsv_s"))
+    else:
         if V_upsv_s_prev-1500 <= V_upsv_s <= V_upsv_s_prev+2000:
             print("f")
 # 37. Расчет наличия нефти в РВС ЦПС, т:
     V_upsv_cps = V_upsv_cps_prev
-    if V_upsv_cps_prev - 1500 <= V_upsv_cps <= V_upsv_cps_prev + 1500:
-        V_upsv_cps = int(input("Введите корректное заначение для V_upsv_cps"))
-    if flag_list[2]:
+    if not flag_list[2]:
+        if V_upsv_cps_prev - 1500 <= V_upsv_cps <= V_upsv_cps_prev + 1500:
+            V_upsv_cps = int(input("Введите корректное заначение для V_upsv_cps"))
+    else:
         if V_upsv_cps_prev - 2000 <= V_upsv_cps <= V_upsv_cps_prev + 3300:
             print("f")
 # 38. Расчет суммарного наличия нефти в РП ЦППН-1, т:
@@ -316,13 +316,70 @@ def CPPN_1 (
 #39. Расчет наличия нефти Лодочного ЛУ в РП на ЦПС и УПСВ - Юг, т:
     V_lodochny_cps_upsv_yu = V_lodochny_cps_upsv_yu_prev + V_lodochni_upsv_yu - G_sikn_tagul
     return {
-        "V_upsv_yu":V_upsv_yu,
-        "V_upsv_s": V_upsv_s,
-        "V_upsv_cps": V_upsv_cps,
-        "V_cppn_1_0": V_cppn_1_0,
-        "V_cppn_1": V_cppn_1,
-        "V_lodochny_cps_upsv_yu": V_lodochny_cps_upsv_yu,
+        "V_upsv_yu":V_upsv_yu, "V_upsv_s": V_upsv_s, "V_upsv_cps": V_upsv_cps, "V_cppn_1_0": V_cppn_1_0,
+        "V_cppn_1": V_cppn_1, "V_lodochny_cps_upsv_yu": V_lodochny_cps_upsv_yu,
     }
 # ===============================================================
-# -------------------- Блок «Сдача ООО «РН-Ванкор»: ---------------------------
+# ------------------ Блок «Сдача ООО «РН-Ванкор»: ---------------
 # ===============================================================
+def rn_vankor (
+        F_vn, F_suzun_obsh, F_suzun_vankor, N, day
+):
+    F_vn = _to_float(F_vn)
+    F_suzun_obsh = _to_float(F_suzun_obsh)
+    F_suzun_vankor = _to_float(F_suzun_vankor)
+    sum_value = 0
+
+
+    list_f_vn_bn = []
+    list_f_bn_suzun = []
+    list_f_bn_suzun_vankor = []
+# 40. Определение посуточной сдачи нефти АО «Ванкорнефть» через СИКН № 1209, т/сут:
+    if day <= N-2:
+        F_bn_vn = 50*round(F_vn/N/50)
+    else:
+        value = 50 * round(F_vn / N / 50)
+        F_bn_vn_N = [value for _ in range(N - 2)]
+        F_bn_vn = (F_vn - sum(F_bn_vn_N)) / 2
+    list_f_vn_bn.append(F_bn_vn)
+    F_bn_vn_month = sum(list_f_vn_bn)
+# 41. Определение посуточной сдачи нефти АО «Сузун» (Сузун) через СИКН № 1209, т/сут:
+    F_suzun = F_suzun_obsh - F_suzun_vankor
+    if day < N-2:
+        F_bn_suzun =50*round(F_suzun/N/50)
+    else:
+        value = 50 * round(F_suzun/N / 50)
+        F_bn_suzun_N = [value for _ in range(N - 2)]
+        F_bn_suzun = (F_suzun - sum(F_bn_suzun_N))/2
+    list_f_bn_suzun.append(F_bn_suzun)
+    F_bn_suzun_month = sum(list_f_bn_suzun)
+# 42. Определение посуточной сдачи нефти АО «Сузун» (Ванкор) через СИКН № 1209, т/сут:
+    if F_suzun_vankor < 20000:
+        e = int(input("Введите на сколько дней распределить сдачу нефти: "))
+        last_multiple_day = 0
+        # Находим последний кратный день
+        for days in range(N, 0, -1):
+            if days % e == 0:
+                last_multiple_day = days
+                break
+        # Рассчитываем значения для текущего дня
+        if day % e == 0:
+            if day != last_multiple_day:
+                F_bp_suzun_vankor = 50 * round(F_suzun_vankor / e / 50)
+                sum_value += F_bp_suzun_vankor
+            else:
+                value = F_suzun_vankor - sum_value
+                F_bp_suzun_vankor = 50 * round(value / 50)
+    else:
+        if day <= N - 2:
+            F_bp_suzun_vankor = 50 * round(F_suzun_vankor / N / 50)
+        else:
+            value = 50 * round(F_suzun_vankor / N / 50)
+            F_bp_suzun_vankor_N = [value] * (N - 2)
+            remaining_value = F_suzun_vankor - sum(F_bp_suzun_vankor_N)
+            F_bp_suzun_vankor = 50 * round(remaining_value / 2 / 50)
+    list_f_bn_suzun_vankor.append(F_bp_suzun_vankor)
+
+
+
+

@@ -43,11 +43,12 @@ def get_day():
         raise ValueError("Некорректный ввод даты")
     month = date.month
     year = date.year
+    day = date.day
     total_days = calendar.monthrange(year, month)[1]
     prev_day = date - timedelta(days=1)
     prev_month = date.replace(day=1)
     last_day_prev_month = prev_month - pd.Timedelta(days=1)
-    return date, total_days, month, prev_day, last_day_prev_month
+    return date, total_days, month, prev_day, last_day_prev_month, day
 # -------------------------
 # Загрузка и подготовка одного файла
 # -------------------------

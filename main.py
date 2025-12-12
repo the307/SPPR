@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import calculate
+from calculate import rn_vankor
 from loader import build_all_data, get_day
 
 
@@ -28,7 +29,7 @@ def main():
     master_df = build_all_data()
     master_df["date"] = pd.to_datetime(master_df["date"], errors="coerce").dt.normalize()
     # Получаем даты
-    n, N, m, prev_days, prev_month = get_day()
+    n, N, m, prev_days, prev_month,day = get_day()
     n = pd.to_datetime(n).normalize()
     prev_days = pd.to_datetime(prev_days).normalize()
     prev_month = pd.to_datetime(prev_month).normalize()
@@ -129,7 +130,7 @@ def main():
         V_ichem_prev=V_ichem_prev, G_lodochny_ichem=G_lodochny_ichem, Q_tagul_prev_month=Q_tagulsk_prev_month,
         G_lodochni_upsv_yu_prev_month=G_lodochni_upsv_yu_prev_month, K_otkachki=K_otkachki, K_gupn_lodochny=K_gupn_lodochny,
         N=N, Q_vo_day=Q_vo_day, Q_lodochny_day=Q_lodochny_day, Q_tagul_day=Q_tagulsk_day, V_tagul=V_tagul,
-        V_tagul_prev=V_tagul_prev, K_g_tagul=K_g_tagul, G_kchng=kchng_results.get("G_kchng", 0)
+        V_tagul_prev=V_tagul_prev, K_g_tagul=K_g_tagul, G_kchng=kchng_results.get("G_kchng", 0), day=day
     )
     master_df = assign_results_to_master(master_df, n, lodochny_results)
 
@@ -156,24 +157,32 @@ def main():
     V_upsv_cps = master_df.loc[master_df["date"] == n, "upsv_cps"].values
     V_lodochny_cps_upsv_yu_prev = master_df.loc[master_df["date"] == prev_days, "lodochny_cps_upsv_yu"].values
     CPPN_1_results = calculate.CPPN_1(
-        V_upsv_yu_prev=V_upsv_yu_prev,
-        V_upsv_s_prev=V_upsv_s_prev,
-        V_upsv_cps_prev=V_upsv_cps_prev,
-        V_upsv_yu_0=V_upsv_yu_0,
-        V_upsv_s_0=V_upsv_s_0,
-        V_upsv_cps_0=V_upsv_cps_0,
-        V_upsv_yu=V_upsv_yu,
-        V_upsv_s=V_upsv_s,
-        V_upsv_cps=V_upsv_cps,
-        N=N,
-        flag_list= flag_list,
-        V_lodochny_cps_upsv_yu_prev=V_lodochny_cps_upsv_yu_prev,
-        G_sikn_tagul = lodochny_results.get("G_sikn_tagul", 0),
-        G_lodochni_upsv_yu = lodochny_results.get("G_lodochni_upsv_yu", 0)
+        V_upsv_yu_prev=V_upsv_yu_prev, V_upsv_s_prev=V_upsv_s_prev, V_upsv_cps_prev=V_upsv_cps_prev, V_upsv_yu_0=V_upsv_yu_0,
+        V_upsv_s_0=V_upsv_s_0, V_upsv_cps_0=V_upsv_cps_0, V_upsv_yu=V_upsv_yu, V_upsv_s=V_upsv_s,
+        V_upsv_cps=V_upsv_cps,  flag_list=flag_list, V_lodochny_cps_upsv_yu_prev=V_lodochny_cps_upsv_yu_prev,
+        G_sikn_tagul = lodochny_results.get("G_sikn_tagul", 0), G_lodochni_upsv_yu = lodochny_results.get("G_lodochni_upsv_yu", 0)
     )
-
-
     master_df = assign_results_to_master(master_df, n, CPPN_1_results)
+
+    # ===============================================================
+    # ------------------ Блок «Сдача ООО «РН-Ванкор»: ---------------
+    # ===============================================================
+    F_vn = master_df.loc[master_df["date"] == n, "volume_vankor"].values
+    F_suzun_obsh = master_df.loc[master_df["date"] == n, "volume_suzun"].values
+    F_suzun_vankor = master_df.loc[master_df["date"] == n, "suzun_vankor"].values
+    # Ручной ввод
+    # if buttom_11:
+    #     F_bn_vn = int(input("Введите значение F_бн_вн: "))
+    # if buttom_12:
+    #     F_suzun = int(input("Введите значение F_suzun: "))
+    # if buttom_12:
+    #     F_bp_suzun_vankor = int(input("Введите значение F_bn_suzun_vankor: "))
+
+
+
+    rn_vankor_result = calculate.rn_vankor(
+        F_vn=F_vn, F_suzun_obsh=F_suzun_obsh, F_suzun_vankor=F_suzun_vankor, N=N,
+    )
     # --- вывод результата в excel---
     output_path = "output.xlsx"  # имя выходного файла
     master_df.to_excel(output_path, index=False)
