@@ -33,7 +33,6 @@ def prepare_suzun_data(master_df, n, m, prev_days, prev_month, N):
         "G_buy_month": G_buy_month,
         "G_out_udt_month": G_out_udt_month,
         "N": N,
-        "n": None,
         "Q_vankor": Q_vankor,
         "Q_suzun": Q_suzun,
         "Q_vslu": Q_vslu,
@@ -47,7 +46,8 @@ def prepare_suzun_data(master_df, n, m, prev_days, prev_month, N):
         "V_upn_suzun_0": V_upn_suzun_0,
         "V_suzun_vslu_0": V_suzun_vslu_0,
         "V_suzun_tng_0": V_suzun_tng_0,
-        "V_suzun_slu_prev": V_suzun_slu_prev
+        "V_suzun_slu_prev": V_suzun_slu_prev,
+
     }
 
 
@@ -96,19 +96,22 @@ def prepare_lodochny_data(master_df, n, m, prev_days, prev_month, N, day, kchng_
 
 
 def prepare_cppn1_data(master_df, n, prev_days, prev_month, lodochny_results):
-    flag_list = [0, 0, 0]
+    flag_list = [0, 0, 0] # Для отслеживания остановки
     V_upsv_yu_0 = master_df.loc[master_df["date"] == prev_month, "upsv_yu"].values
     V_upsv_s_0 = master_df.loc[master_df["date"] == prev_month, "upsv_s"].values
     V_upsv_cps_0 = master_df.loc[master_df["date"] == prev_month, "upsv_cps"].values
+    V_upsv_yu_prev = master_df.loc[master_df["date"] == prev_days, "upsv_yu"].values
+    V_upsv_s_prev = master_df.loc[master_df["date"] == prev_days, "upsv_s"].values
+    V_upsv_cps_prev = master_df.loc[master_df["date"] == prev_days, "upsv_cps"].values
     V_upsv_yu = master_df.loc[master_df["date"] == n, "upsv_yu"].values
     V_upsv_s = master_df.loc[master_df["date"] == n, "upsv_s"].values
     V_upsv_cps = master_df.loc[master_df["date"] == n, "upsv_cps"].values
     V_lodochny_cps_upsv_yu_prev = master_df.loc[master_df["date"] == prev_days, "lodochny_cps_upsv_yu"].values
 
     return {
-        "V_upsv_yu_prev": master_df.loc[master_df["date"] == prev_days, "upsv_yu"].values,
-        "V_upsv_s_prev": master_df.loc[master_df["date"] == prev_days, "upsv_s"].values,
-        "V_upsv_cps_prev": master_df.loc[master_df["date"] == prev_days, "upsv_cps"].values,
+        "V_upsv_yu_prev": V_upsv_yu_prev,
+        "V_upsv_s_prev": V_upsv_s_prev,
+        "V_upsv_cps_prev": V_upsv_cps_prev,
         "V_upsv_yu_0": V_upsv_yu_0,
         "V_upsv_s_0": V_upsv_s_0,
         "V_upsv_cps_0": V_upsv_cps_0,
@@ -122,27 +125,27 @@ def prepare_cppn1_data(master_df, n, prev_days, prev_month, lodochny_results):
     }
 
 
-# def prepare_rn_vankor_data(master_df, n, prev_days, N, day):
-#     F_vn = master_df.loc[master_df["date"] == n, "volume_vankor"].values
-#     F_suzun_obsh = master_df.loc[master_df["date"] == n, "volume_suzun"].values
-#     F_suzun_vankor = master_df.loc[master_df["date"] == n, "suzun_vankor"].values
-#     V_ctn_suzun_vslu_norm = master_df.loc[master_df["date"] == prev_days, "ctn_suzun_vslu_norm"].values
-#     V_ctn_suzun_vslu = master_df.loc[master_df["date"] == n, "ctn_suzun_vslu"].values
-#     F_tagul_lpu = master_df.loc[master_df["date"] == n, "volume_lodochny"].values
-#     F_tagul_tpu = master_df.loc[master_df["date"] == n, "volume_tagulsk"].values
-#     F_skn = master_df.loc[master_df["date"] == n, "skn"].values
-#     F_vo = master_df.loc[master_df["date"] == n, "volume_vostok_oil"].values
-#
-#     return {
-#         "F_vn": F_vn,
-#         "F_suzun_obsh": F_suzun_obsh,
-#         "F_suzun_vankor": F_suzun_vankor,
-#         "N": N,
-#         "day": day,
-#         "V_ctn_suzun_vslu_norm": V_ctn_suzun_vslu_norm,
-#         "V_ctn_suzun_vslu": V_ctn_suzun_vslu,
-#         "F_tagul_lpu": F_tagul_lpu,
-#         "F_tagul_tpu": F_tagul_tpu,
-#         "F_skn": F_skn,
-#         "F_vo": F_vo
-#     }
+def prepare_rn_vankor_data(master_df, n, prev_days, N, day,m):
+    F_vn = master_df.loc[master_df["date"].dt.month == m, "volume_vankor"].values
+    F_suzun_obsh = master_df.loc[master_df["date"].dt.month == m, "volume_suzun"].values
+    F_suzun_vankor = master_df.loc[master_df["date"].dt.month == m, "suzun_vankor"].values
+    V_ctn_suzun_vslu_norm = master_df.loc[master_df["date"] == prev_days, "ctn_suzun_vslu_norm"].values
+    V_ctn_suzun_vslu = master_df.loc[master_df["date"] == n, "ctn_suzun_vslu"].values
+    F_tagul_lpu = master_df.loc[master_df["date"].dt.month == m, "volume_lodochny"].values
+    F_tagul_tpu = master_df.loc[master_df["date"].dt.month == m, "volume_tagulsk"].values
+    F_skn = master_df.loc[master_df["date"] == n, "skn"].values
+    F_vo = master_df.loc[master_df["date"].dt.month == m, "volume_vostok_oil"].values
+
+    return {
+        "F_vn": F_vn,
+        "F_suzun_obsh": F_suzun_obsh,
+        "F_suzun_vankor": F_suzun_vankor,
+        "N": N,
+        "day": day,
+        "V_ctn_suzun_vslu_norm": V_ctn_suzun_vslu_norm,
+        "V_ctn_suzun_vslu": V_ctn_suzun_vslu,
+        "F_tagul_lpu": F_tagul_lpu,
+        "F_tagul_tpu": F_tagul_tpu,
+        "F_skn": F_skn,
+        "F_vo": F_vo
+    }

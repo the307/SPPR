@@ -4,9 +4,9 @@ import calculate
 from loader import build_all_data, get_day
 from data_prep import (
     prepare_suzun_data, prepare_vo_data, prepare_kchng_data,
-    prepare_lodochny_data, prepare_cppn1_data
+    prepare_lodochny_data, prepare_cppn1_data, prepare_rn_vankor_data
 )
-from inputs import get_suzun_inputs, get_lodochny_inputs
+from inputs import get_suzun_inputs, get_lodochny_inputs, get_cppn_1_inputs, get_rn_vankor_inputs
 
 def assign_results_to_master(master_df, n, results):
     """Безопасно записывает результаты в master_df (берёт скаляр из массива)."""
@@ -64,13 +64,15 @@ def main():
 
     # -------------------- Блок «ЦППН-1» ----------------------------
     cppn1_data = prepare_cppn1_data(master_df, n, prev_days, prev_month, lodochny_results)
-    cppn1_results = calculate.CPPN_1(**cppn1_data)
+    cppn_1_inputs = get_cppn_1_inputs()
+    cppn1_results = calculate.CPPN_1(**cppn1_data, **cppn_1_inputs)
     master_df = assign_results_to_master(master_df, n, cppn1_results)
 
-    # # ------------------ Блок «Сдача ООО «РН-Ванкор»: ---------------
-    # rn_data = prepare_rn_vankor_data(master_df, n, prev_days, N, day)
-    # rn_vankor_result = calculate.rn_vankor(**rn_data)
-    # master_df = assign_results_to_master(master_df, n, rn_vankor_result)
+    # ------------------ Блок «Сдача ООО «РН-Ванкор»: ---------------
+    rn_data = prepare_rn_vankor_data(master_df, n, prev_days, N, day,m)
+    rn_vankor_inputs = get_rn_vankor_inputs()
+    rn_vankor_result = calculate.rn_vankor(**rn_data, **rn_vankor_inputs)
+    master_df = assign_results_to_master(master_df, n, rn_vankor_result)
 
     # --- вывод результата в excel---
     output_path = "output.xlsx"  # имя выходного файла
