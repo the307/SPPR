@@ -484,11 +484,31 @@ def rn_vankor(
         "F_bp_suzun_vslu_month": F_bp_suzun_vslu_month, "F_bp_tagul_lpu": F_bp_tagul_lpu, "F_bp_tagul_lpu_month": F_bp_tagul_lpu_month,
         "F_bp_tagul_tpu": F_bp_tagul_tpu, "F_bp_tagul_tpu_month": F_bp_tagul_tpu_month, "F_bp_skn": F_bp_skn, "F_bp_skn_month": F_bp_skn_month,
         "F_bp_vo": F_bp_vo, "F_bp_vo_month": F_bp_vo_month, "F_bp_kchng":F_bp_kchng, "F_bp_kchng_month":F_bp_kchng_month, "F_bp": F_bp,
-        "F_bp_month":F_bp_month, "F_bp_sr":F_bp_sr,    "__alarm_first_10_days": alarm_first_10_days, "__alarm_first_10_days_msg": alarm_first_10_days_msg
+        "F_bp_month":F_bp_month, "F_bp_sr":F_bp_sr, "__alarm_first_10_days": alarm_first_10_days, "__alarm_first_10_days_msg": alarm_first_10_days_msg
     }
 
 # ===============================================================
-# ------------------ Блок «Сдача ООО «РН-Ванкор»: ---------------
+# ---------------------- Блок «СИКН-1208»: ----------------------
 # ===============================================================
+def sikn_1208 (
+    G_suzun_vslu, G_suzun_sikn_data, G_sikn_tagul_lod, G_buy_day, G_per, G_suzun, G_sikn_suzun_data,
 
+):
+    G_suzun_vslu = _to_float(G_suzun_vslu)
+    G_buy_day = _to_float(G_buy_day)
+    G_per = _to_float(G_per)
+    G_suzun = _to_float(G_suzun)
+# 52.	Определение откачки нефти АО «Сузун» (ВСЛУ) через СИКН № 1208, т/сут:
+    G_sikn_vslu = G_suzun_vslu
+    G_sikn_vslu_month = G_suzun_sikn_data.sum()+G_sikn_vslu# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+# 53.	Определение суммарного месячного значения откачки нефти ООО «Тагульское» через СИКН № 1208, т/сут:
+    G_sikn_tagul = G_sikn_tagul_lod
+# 54.	Расчет суммарной откачки нефти АО «Сузун» (СЛУ+ВСЛУ) через СИКН № 1208, т/сут:
+    G_sikn_suzun = G_suzun + G_buy_day - G_per
+    G_sikn_suzun_month = G_sikn_suzun_data.sum()+G_sikn_suzun# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_suzun_tng
+    return {
+        "G_sikn_vslu":G_sikn_vslu, "G_sikn_vslu_month":G_sikn_vslu_month, "G_sikn_tagul":G_sikn_tagul, "G_sikn_suzun":G_sikn_suzun,
+        "G_sikn_suzun_month":G_sikn_suzun_month,
+    }
 

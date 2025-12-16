@@ -76,7 +76,10 @@ def main():
     alarm_flag = rn_vankor_result.pop("__alarm_first_10_days", False)
     alarm_msg = rn_vankor_result.pop("__alarm_first_10_days_msg", None)
     master_df = assign_results_to_master(master_df, n, rn_vankor_result)
-
+    # -------------------- Блок «СИКН №1208» ----------------------------
+    sikn_1208_data = prepare_cppn1_data(master_df, n, prev_days, prev_month, suzun_results, lodochny_results)
+    sikn_1208_results = calculate.sikn_1208(**sikn_1208_data)
+    master_df = assign_results_to_master(master_df, n, sikn_1208_results)
     # --- вывод результата в excel---
     output_path = "output.xlsx"
     export_to_excel(master_df=master_df, output_path=output_path, calc_date=n, alarm_flag=alarm_flag, alarm_msg=alarm_msg, month_column_name="F_bp_month"

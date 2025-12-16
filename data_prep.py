@@ -198,3 +198,16 @@ def prepare_rn_vankor_data(master_df, n, prev_days, N, day,m):
         "F_bp_vo_data":F_bp_vo_data,
         "F_bp_kchng_data":F_bp_kchng_data,
     }
+def prepare_sikn_1208_data(master_df, n, prev_days, N, day,m,suzun_results, lodochny_results):
+    G_suzun_sikn_data = master_df.loc[master_df["date"].dt.month == m, "G_suzun_sikn_data"]
+    G_sikn_suzun_data = master_df.loc[master_df["date"].dt.month == m, "G_sikn_suzun_data"]
+
+    return {
+        "G_suzun_vslu": suzun_results.get("G_suzun_vslu", 0),
+        "G_sikn_tagul_lod_data": lodochny_results.get("G_sikn_tagul_month", 0),
+        "G_buy_day": lodochny_results.get("G_buy_day", 0),
+        "G_per": lodochny_results.get("G_per", 0),
+        "G_suzun": suzun_results.get("G_suzun", 0),
+        "G_suzun_sikn_data": G_suzun_sikn_data,
+        "G_sikn_suzun_data":G_sikn_suzun_data,
+    }
