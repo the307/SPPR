@@ -76,7 +76,6 @@ def prepare_kchng_data(master_df, n, m):
 
 
 def prepare_lodochny_data(master_df, n, m, prev_days, prev_month, N, day, kchng_results):
-    # Внимание: в оригинальном main иногда использовался prev_month как дата/месяц — воспроизводим точно
     Q_tagulsk_prev_month = master_df.loc[master_df["date"] == prev_month, "gtm_tagulsk"].values
     G_lodochni_upsv_yu_prev_month = master_df.loc[master_df["date"] == prev_month, "lodochni_upsv_yu"].values
     Q_tagulsk = master_df.loc[master_df["date"].dt.month == m, "gtm_tagulsk"].values
@@ -198,10 +197,21 @@ def prepare_rn_vankor_data(master_df, n, prev_days, N, day,m):
         "F_bp_vo_data":F_bp_vo_data,
         "F_bp_kchng_data":F_bp_kchng_data,
     }
-def prepare_sikn_1208_data(master_df, n, prev_days, N, day,m,suzun_results, lodochny_results):
+def prepare_sikn_1208_data(master_df, n, prev_days, m, suzun_results, lodochny_results, G_suzun_tng, cppn1_results):
     G_suzun_sikn_data = master_df.loc[master_df["date"].dt.month == m, "G_suzun_sikn_data"]
     G_sikn_suzun_data = master_df.loc[master_df["date"].dt.month == m, "G_sikn_suzun_data"]
+    G_suzun_tng_data = master_df.loc[master_df["date"].dt.month == m, "G_suzun_tng_data"]
+    G_sikn_data = master_df.loc[master_df["date"].dt.month == m, "G_sikn_data"]
+    G_sikn_vankor_data = master_df.loc[master_df["date"].dt.month == m, "G_sikn_vankor_data"]
+    G_skn_data = master_df.loc[master_df["date"].dt.month == m, "G_skn_data"]
 
+    Q_vankor = master_df.loc[master_df["date"] == n, "gtm_vn"].values
+    V_upsv_yu = master_df.loc[master_df["date"] == n, "upsv_yu"].values
+    V_upsv_s = master_df.loc[master_df["date"] == n, "upsv_s"].values
+    V_upsv_cps = master_df.loc[master_df["date"] == n, "upsv_cps"].values
+    V_upsv_yu_prev = master_df.loc[master_df["date"] == prev_days, "upsv_yu"].values
+    V_upsv_s_prev = master_df.loc[master_df["date"] == prev_days, "upsv_s"].values
+    V_upsv_cps_prev = master_df.loc[master_df["date"] == prev_days, "upsv_cps"].values
     return {
         "G_suzun_vslu": suzun_results.get("G_suzun_vslu", 0),
         "G_sikn_tagul_lod_data": lodochny_results.get("G_sikn_tagul_month", 0),
@@ -210,4 +220,18 @@ def prepare_sikn_1208_data(master_df, n, prev_days, N, day,m,suzun_results, lodo
         "G_suzun": suzun_results.get("G_suzun", 0),
         "G_suzun_sikn_data": G_suzun_sikn_data,
         "G_sikn_suzun_data":G_sikn_suzun_data,
+        "G_suzun_tng":G_suzun_tng,
+        "G_suzun_tng_data":G_suzun_tng_data,
+        "Q_vankor":Q_vankor,
+        "V_upsv_yu":V_upsv_yu,
+        "V_upsv_s":V_upsv_s,
+        "V_upsv_cps":V_upsv_cps,
+        "V_upsv_yu_prev":V_upsv_yu_prev,
+        "V_upsv_s_prev":V_upsv_s_prev,
+        "V_upsv_cps_prev":V_upsv_cps_prev,
+        "G_lodochny_uspv_yu": lodochny_results.get("G_lodochny_yu", 0),
+        "G_sikn_data":G_sikn_data,
+        "G_sikn_vankor_data":G_sikn_vankor_data,
+        "V_cppn_1": cppn1_results.get("V_cppn_1", 0),
+        "G_skn_data":G_skn_data
     }

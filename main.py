@@ -4,9 +4,9 @@ import calculate
 from loader import build_all_data, get_day
 from data_prep import (
     prepare_suzun_data, prepare_vo_data, prepare_kchng_data,
-    prepare_lodochny_data, prepare_cppn1_data, prepare_rn_vankor_data
+    prepare_lodochny_data, prepare_cppn1_data, prepare_rn_vankor_data ,prepare_sikn_1208_data
 )
-from inputs import get_suzun_inputs, get_lodochny_inputs, get_cppn_1_inputs, get_rn_vankor_inputs
+from inputs import get_suzun_inputs, get_lodochny_inputs, get_cppn_1_inputs, get_rn_vankor_inputs,get_sikn_1208_inputs
 from excel_export import export_to_excel
 
 def assign_results_to_master(master_df, n, results):
@@ -77,8 +77,10 @@ def main():
     alarm_msg = rn_vankor_result.pop("__alarm_first_10_days_msg", None)
     master_df = assign_results_to_master(master_df, n, rn_vankor_result)
     # -------------------- Блок «СИКН №1208» ----------------------------
-    sikn_1208_data = prepare_cppn1_data(master_df, n, prev_days, prev_month, suzun_results, lodochny_results)
-    sikn_1208_results = calculate.sikn_1208(**sikn_1208_data)
+    G_suzun_tng = suzun_inputs["G_suzun_tng"]
+    sikn_1208_data = prepare_sikn_1208_data(master_df, n, m, prev_month, suzun_results, lodochny_results, G_suzun_tng, cppn1_results)
+    sikn_1208_inputs =get_sikn_1208_inputs()
+    sikn_1208_results = calculate.sikn_1208(**sikn_1208_data,**sikn_1208_inputs)
     master_df = assign_results_to_master(master_df, n, sikn_1208_results)
     # --- вывод результата в excel---
     output_path = "output.xlsx"

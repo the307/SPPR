@@ -51,7 +51,7 @@ def suzun(
     # --- 3. Расход на переработку (Gпер)
     G_per = G_buy_day - G_out_udt_day
     print(G_per)
-    G_per_month = sum(G_per_data)+G_per # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_per_month = sum(G_per_data)+G_per # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 4–8. Суммарные месячные значения
     Q_vankor_month = Q_vankor.sum()
@@ -65,7 +65,7 @@ def suzun(
 
     # --- 10. Откачка нефти Сузун (ВСЛУ)
     G_suzun_vslu = Q_vslu_day
-    G_suzun_vslu_month = sum(G_suzun_vslu_data)+G_suzun_vslu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_suzun_vslu_month = sum(G_suzun_vslu_data)+G_suzun_vslu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 11–12. Наличие нефти
     if manual_V_upn_suzun is not None:
@@ -83,11 +83,11 @@ def suzun(
 
     # --- 14. Откачка нефти Сузун (СЛУ)
     G_suzun_slu = Q_suzun_day - Q_vslu_day - (V_suzun_slu - V_suzun_slu_prev) - K_g_suzun
-    G_suzun_slu_month = G_suzun_slu_data.sum()+G_suzun_slu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_suzun_slu_month = G_suzun_slu_data.sum()+G_suzun_slu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 15. Общая откачка нефти Сузун
     G_suzun = G_suzun_vslu + G_suzun_tng + G_suzun_slu
-    G_suzun_month = G_suzun_data.sum()+G_suzun # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_suzun_month = G_suzun_data.sum()+G_suzun # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 16. Потери при откачке нефти
     G_suzun_delta = Q_suzun_day - G_suzun_slu - G_suzun_vslu - (V_upn_suzun - V_upn_suzun_prev) + G_payaha
@@ -107,7 +107,7 @@ def suzun(
 def VO(Q_vo_day, G_upn_lodochny_ichem_data, m):
     Q_vo_day = _to_float(Q_vo_day)
     G_upn_lodochny_ichem = Q_vo_day
-    G_upn_lodochny_ichem_month = G_upn_lodochny_ichem_data.sum()+G_upn_lodochny_ichem # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_upn_lodochny_ichem_month = G_upn_lodochny_ichem_data.sum()+G_upn_lodochny_ichem # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     return {
         "G_upn_lod": G_upn_lodochny_ichem,
@@ -124,7 +124,7 @@ def kchng(Q_kchng_day, Q_kchng, G_kchng_data):
 
     Q_kchng_month = Q_kchng.sum()
     G_kchng = Q_kchng_day
-    G_kchng_month = G_kchng_data.sum() + G_kchng # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_kchng_month = G_kchng_data.sum() + G_kchng # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     return {
         "Q_kchng_month": Q_kchng_month,
@@ -185,7 +185,7 @@ def lodochny(
             K_otkachki = K_otkachki_month
     # --- 26. Откачка нефти Лодочного месторождения на УПСВ-Юг ---
     G_lodochny_uspv_yu = Q_lodochny_day * (1 - K_otkachki) - (K_gupn_lodochny / 2)
-    G_lodochny_uspv_yu_month = G_lodochny_uspv_yu_data.sum() + G_lodochny_uspv_yu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_lodochny_uspv_yu_month = G_lodochny_uspv_yu_data.sum() + G_lodochny_uspv_yu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
     # --- 27 расчет откачки нефти
     if manual_G_sikn_tagul is not None:
         G_sikn_tagul = manual_G_sikn_tagul
@@ -200,29 +200,29 @@ def lodochny(
             alarm = False # заменить на переменную из массива
         else:
             G_sikn_tagul = int(input(f"Необходимо откорректировать значение откачки {G_sikn_tagul}"))
-    G_sikn_tagul_month = G_sikn_tagul_data.sum()+G_sikn_tagul # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_sikn_tagul_month = G_sikn_tagul_data.sum()+G_sikn_tagul # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
     # --- 28–29. Откачка в МН Тагульского месторождения ---
     if manual_V_tagul is not None:
         V_tagul = manual_V_tagul
     else:
         V_tagul = V_tagul_prev
     G_tagul = Q_tagul_day - (V_tagul - V_tagul_prev) - K_g_tagul
-    G_tagul_month = G_tagul_data.sum()+G_tagul # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_tagul_month = G_tagul_data.sum()+G_tagul # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 30. Потери ---
     delte_G_tagul = Q_tagul_day - G_tagul - (V_tagul - V_tagul_prev)
-    delte_G_tagul_month = delte_G_tagul_data.sum()+delte_G_tagul # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    delte_G_tagul_month = delte_G_tagul_data.sum()+delte_G_tagul # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 31–32. Откачка нефти в МН ---
     G_upn_lodochny = Q_lodochny_day * K_otkachki - (V_upn_lodochny-V_upn_lodochny_prev) - (K_gupn_lodochny / 2) + Q_vo_day
     G_lodochny = G_upn_lodochny - G_ichem
-    G_lodochny_month = G_lodochny_data.sum()+G_lodochny # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_lodochny_month = G_lodochny_data.sum()+G_lodochny # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 33–34. Сводные потери и суммарная откачка ---
     delte_G_upn_lodochny = Q_lodochny_day + Q_vo_day - G_lodochny_uspv_yu - G_lodochny - (V_upn_lodochny - V_upn_lodochny_prev)
-    G_upn_lodochny_month = delte_G_upn_lodochny_data.sum() + delte_G_upn_lodochny # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_upn_lodochny_month = delte_G_upn_lodochny_data.sum() + delte_G_upn_lodochny # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
     G_tagul_lodochny = G_tagul + G_upn_lodochny + G_kchng
-    G_tagul_lodochny_month = G_tagul_lodochny_data.sum()+G_tagul_lodochny # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_tagul_lodochny_month = G_tagul_lodochny_data.sum()+G_tagul_lodochny # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     return {
         "Q_tagulsk_month": Q_tagulsk_month, "Q_lodochny_month": Q_lodochny_month, "V_upn_lodochny": V_upn_lodochny,
@@ -340,7 +340,7 @@ def rn_vankor(
             F_bp_vn = base
         else:
             F_bp_vn = F_vn - base * (N - 1)
-    F_bp_vn_month = F_bp_vn_data.sum()+F_bp_vn # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_vn_month = F_bp_vn_data.sum()+F_bp_vn # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # =========================================================
     # 41. Сузун (общий)
@@ -353,7 +353,7 @@ def rn_vankor(
             F_bp_suzun = base
         else:
             F_bp_suzun = F_suzun - base * (N - 1)
-    F_bp_suzun_month = F_bp_suzun_data.sum()+F_bp_suzun # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_suzun_month = F_bp_suzun_data.sum()+F_bp_suzun # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # =========================================================
     # 42. Сузун → Ванкор (через e)
@@ -377,7 +377,7 @@ def rn_vankor(
             F_bp_suzun_vankor = base
         else:
             F_bp_suzun_vankor = (F_suzun_vankor - base * (N - 2))/2
-    F_bp_suzun_vankor_month = F_bp_suzun_vankor_data.sum()+F_bp_suzun_vankor # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_suzun_vankor_month = F_bp_suzun_vankor_data.sum()+F_bp_suzun_vankor # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # =========================================================
     # 43. Сузун → ВСЛУ
@@ -385,7 +385,7 @@ def rn_vankor(
         F_bp_suzun_vslu = manual_F_bp_suzun_vslu
     elif V_ctn_suzun_vslu > V_ctn_suzun_vslu_norm + 1000:
         F_bp_suzun_vslu = 1000
-    F_bp_suzun_vslu_month = F_bp_suzun_vslu_data.sum()+F_bp_suzun_vslu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_suzun_vslu_month = F_bp_suzun_vslu_data.sum()+F_bp_suzun_vslu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # =========================================================
     # 44. Тагульское — ЛПУ
@@ -398,7 +398,7 @@ def rn_vankor(
         else:
             F_bp_tagul_lpu = (F_tagul_lpu - base * (N - 2))/2
 
-    F_bp_tagul_lpu_month = F_bp_tagul_lpu_data.sum()+F_bp_tagul_lpu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_tagul_lpu_month = F_bp_tagul_lpu_data.sum()+F_bp_tagul_lpu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # =========================================================
     # 45. Тагульское — ТПУ
@@ -411,7 +411,7 @@ def rn_vankor(
         else:
             F_bp_tagul_tpu = (F_tagul_tpu - base * (N - 2))/2
 
-    F_bp_tagul_tpu_month = F_bp_tagul_tpu_data.sum()+F_bp_tagul_tpu# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_tagul_tpu_month = F_bp_tagul_tpu_data.sum()+F_bp_tagul_tpu# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # =========================================================
     # 47. СКН
@@ -420,7 +420,7 @@ def rn_vankor(
     else:
         base = round((F_skn / N) / 50) * 50
         F_bp_skn = base if day < (N-2) else (F_skn - base * (N - 1))/2
-    F_bp_skn_month = F_bp_skn_data.sum()+F_bp_skn # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_skn_month = F_bp_skn_data.sum()+F_bp_skn # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # =========================================================
     # 48. Восток Ойл (через e)
@@ -442,7 +442,7 @@ def rn_vankor(
     else:
         base = round((F_vo / N) / 50) * 50
         F_bp_vo = base if day < N else F_vo - base * (N - 1)
-    F_bp_vo_month = F_bp_vo_data.sum()+F_bp_vo# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_vo_month = F_bp_vo_data.sum()+F_bp_vo# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
     """
     Для формулы 49 уточнить Knраб 
     """
@@ -467,10 +467,10 @@ def rn_vankor(
     else:
         base = round((F_vo / N) / 50) * 50
         F_bp_kchng = base if day < N else F_kchng - base * (N - 1)
-    F_bp_kchng_month = F_bp_kchng_data.sum()+F_bp_kchng# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_kchng_month = F_bp_kchng_data.sum()+F_bp_kchng# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
     # 51.	Расчет суммарной сдачи через СИКН № 1209:
     F_bp = F_bp_vn + F_bp_tagul_lpu + F_bp_tagul_lpu + F_bp_suzun_vankor + F_bp_suzun_vslu + F_bp_skn + F_bp_vo + F_bp_tng + F_bp_kchng
-    F_bp_month = sum(F_bp_data)+F_bp # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    F_bp_month = sum(F_bp_data)+F_bp # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
     F_bp_sr = F_bp_month/N
     if F_bp_data[:10].sum() < F_bp_sr:
         alarm_first_10_days = True
@@ -491,24 +491,47 @@ def rn_vankor(
 # ---------------------- Блок «СИКН-1208»: ----------------------
 # ===============================================================
 def sikn_1208 (
-    G_suzun_vslu, G_suzun_sikn_data, G_sikn_tagul_lod, G_buy_day, G_per, G_suzun, G_sikn_suzun_data,
-
+    G_suzun_vslu, G_suzun_sikn_data, G_sikn_tagul_lod_data, G_buy_day, G_per, G_suzun, G_sikn_suzun_data, G_suzun_tng_data,
+    G_suzun_tng, Q_vankor, V_upsv_yu, V_upsv_s, V_upsv_cps, V_upsv_yu_prev, V_upsv_s_prev, V_upsv_cps_prev,G_lodochny_uspv_yu,
+    K_delte_g_sikn, G_sikn_data, G_sikn_vankor_data, V_cppn_1, V_cppn_1_prev, G_skn_data
 ):
     G_suzun_vslu = _to_float(G_suzun_vslu)
     G_buy_day = _to_float(G_buy_day)
     G_per = _to_float(G_per)
+    Q_vankor = _to_float(Q_vankor)
     G_suzun = _to_float(G_suzun)
+    V_upsv_yu = _to_float(V_upsv_yu)
+    V_upsv_s = _to_float(V_upsv_s)
+    V_upsv_cps = _to_float(V_upsv_cps)
+    V_upsv_yu_prev = _to_float(V_upsv_yu_prev)
+    V_upsv_s_prev = _to_float(V_upsv_s_prev)
+    V_upsv_cps_prev = _to_float(V_upsv_cps_prev)
+    # ---------- Инициализация  ----------
+    V_cppn_1_prev = 123 # Для расчета в будущем подтягиваем из бд
 # 52.	Определение откачки нефти АО «Сузун» (ВСЛУ) через СИКН № 1208, т/сут:
     G_sikn_vslu = G_suzun_vslu
-    G_sikn_vslu_month = G_suzun_sikn_data.sum()+G_sikn_vslu# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
+    G_sikn_vslu_month = G_suzun_sikn_data.sum()+G_sikn_vslu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 # 53.	Определение суммарного месячного значения откачки нефти ООО «Тагульское» через СИКН № 1208, т/сут:
-    G_sikn_tagul = G_sikn_tagul_lod
+    G_sikn_tagul = G_sikn_tagul_lod_data
 # 54.	Расчет суммарной откачки нефти АО «Сузун» (СЛУ+ВСЛУ) через СИКН № 1208, т/сут:
     G_sikn_suzun = G_suzun + G_buy_day - G_per
-    G_sikn_suzun_month = G_sikn_suzun_data.sum()+G_sikn_suzun# данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрадь день расчета и снести ручные данные в manual_data.py до этого дня
-    G_suzun_tng
+    G_sikn_suzun_month = G_sikn_suzun_data.sum()+G_sikn_suzun # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
+# 55.	Расчет откачки нефти АО «Таймырнефтегаз» (Пайяха) через СИКН № 1208, т/сут:
+    G_sikn_tng = G_suzun_tng
+    G_sikn_tng_month = G_suzun_tng_data.sum() + G_suzun_tng # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
+# 57.	Расчет суммарной откачки нефти через СИКН № 1208, т/сут:
+    G_sikn = Q_vankor + G_suzun - (V_upsv_yu - V_upsv_yu_prev) - (V_upsv_s - V_upsv_s_prev) - (V_upsv_cps - V_upsv_cps_prev) + G_lodochny_uspv_yu + K_delte_g_sikn + G_buy_day + G_per
+    G_sikn_month = G_sikn_data.sum() + G_sikn # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
+# 58.	Расчет откачки нефти АО «Ванкорнефть» через СИКН № 1208, т/сут:
+    G_sikn_vankor = G_sikn - G_sikn_tagul - G_sikn_suzun - G_sikn_tng
+    G_sikn_vankor_month = G_sikn_vankor_data.sum() + G_sikn_vankor # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
+# 59.	Определение суммарного месячного значения передачи нефти ООО «СКН» на транспортировку КНПС, т/сут:
+    G_skn_month = G_skn_data.sum() # пока значения подгружаются из manual_data, в дальнейшем предусмотреть ручной ввод
+# 60.	Расчет потерь при откачке через СИКН № 1208 (потери+отпуск+прочее), т/сут:
+    G_delta_sikn = Q_vankor + G_suzun + G_lodochny_uspv_yu - G_sikn - (V_cppn_1 - V_cppn_1_prev) + G_buy_day - G_per
     return {
         "G_sikn_vslu":G_sikn_vslu, "G_sikn_vslu_month":G_sikn_vslu_month, "G_sikn_tagul":G_sikn_tagul, "G_sikn_suzun":G_sikn_suzun,
-        "G_sikn_suzun_month":G_sikn_suzun_month,
+        "G_sikn_suzun_month":G_sikn_suzun_month, "G_sikn_tng":G_sikn_tng, "G_sikn_tng_month":G_sikn_tng_month, "G_sikn":G_sikn,
+        "G_sikn_vankor":G_sikn_vankor, "G_sikn_vankor_month":G_sikn_vankor_month, "G_skn_month":G_skn_month, "G_delta_sikn":G_delta_sikn,
     }
 

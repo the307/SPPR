@@ -103,3 +103,8 @@ def get_rn_vankor_inputs():
         )
 
     }
+def get_sikn_1208_inputs():
+    K_delte_g_sikn = float(input("Введите К_G_sikn: "))
+    return{
+        "K_delte_g_sikn":K_delte_g_sikn,
+    }
