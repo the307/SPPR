@@ -109,12 +109,23 @@ def get_sikn_1208_inputs():
         "K_delte_g_sikn":K_delte_g_sikn,
     }
 def get_TSTN_inputs():
-    F_suzun_vslu = float(input("Введите F_suzun_vslu : ")),
+    F_suzun_vslu = float(input("Введите F_suzun_vslu : "))
     K_suzun = float(input("Введите K_сузун: "))
     K_vankor = float(input("Введите K_vankor: "))
-
+    G_skn = float(input("Введите G_skn: "))
+    K_skn = float(input("Введите K_skn: "))
+    K_ichem = float(input("Введите K_ichem: "))
+    K_payaha = float(input("Введите K_payaha: "))
+    K_tagul = float(input("Введите K_tagul: "))
+    K_lodochny = float(input("Введите K_lodochny: "))
     return {
         "K_suzun":K_suzun,
         "K_vankor":K_vankor,
-        "F_suzun_vslu":F_suzun_vslu
+        "F_suzun_vslu":F_suzun_vslu,
+        "G_skn":G_skn,
+        "K_skn":K_skn,
+        "K_ichem":K_ichem,
+        "K_payaha":K_payaha,
+        "K_tagul":K_tagul,
+        "K_lodochny":K_lodochny,
     }

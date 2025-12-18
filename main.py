@@ -10,19 +10,23 @@ from inputs import get_suzun_inputs, get_lodochny_inputs, get_cppn_1_inputs, get
 from excel_export import export_to_excel
 
 def assign_results_to_master(master_df, n, results):
-    """Безопасно записывает результаты в master_df (берёт скаляр из массива)."""
     mask = master_df["date"] == n
-    for k, v in results.items():
-        # создаём колонку, если её нет
-        if k not in master_df.columns:
-            master_df[k] = np.nan
-        # если v — массив numpy или список → берём первое значение
-        if isinstance(v, (list, np.ndarray)):
-            if len(v) > 0:
-                v = float(v[0])
-            else:
-                v = np.nan
-        master_df.loc[mask, k] = v
+    # 1. Преобразуем results в DataFrame (1 строка)
+    row_df = pd.DataFrame([results])
+    row_df["date"] = n
+    # 2. Объединяем по колонкам
+    master_df = master_df.merge(
+        row_df,
+        on="date",
+        how="left",
+        suffixes=("", "_new")
+    )
+    # 3. Перезаписываем значения только для текущей даты
+    for col in results.keys():
+        new_col = f"{col}_new"
+        if new_col in master_df.columns:
+            master_df.loc[mask, col] = master_df.loc[mask, new_col]
+            master_df.drop(columns=[new_col], inplace=True)
     return master_df
 
 
@@ -82,8 +86,10 @@ def main():
     sikn_1208_inputs =get_sikn_1208_inputs()
     sikn_1208_results = calculate.sikn_1208(**sikn_1208_data,**sikn_1208_inputs)
     master_df = assign_results_to_master(master_df, n, sikn_1208_results)
-    # -------------------- Блок «СИКН №1208» ----------------------------
-    TSTN_data = prepare_TSTN_data(master_df, n,prev_days,prev_month,m,N,sikn_1208_results,lodochny_results,kchng_results,suzun_results)
+    # -------------------- Блок «Наличие и откачка ЦТН» ----------------------------
+    G_ichem = lodochny_inputs["G_ichem"]
+    G_suzun_tng = suzun_inputs["G_suzun_tng"]
+    TSTN_data = prepare_TSTN_data(master_df, n,prev_days,prev_month,m,N,sikn_1208_results,lodochny_results,kchng_results,suzun_results,G_ichem,G_suzun_tng)
     TSTN_inputs = get_TSTN_inputs()
     TSTN_results = calculate.TSTN(**TSTN_data, **TSTN_inputs)
     master_df = assign_results_to_master(master_df, n, TSTN_results)

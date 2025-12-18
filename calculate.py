@@ -161,6 +161,7 @@ def lodochny(
     K_gupn_lodochny = float(K_gupn_lodochny)
     K_g_tagul = float(K_g_tagul)
     G_kchng = _to_float(G_kchng)
+    Q_tagul_day = _to_float(Q_tagul_day)
     N = int(N) if N else 1.0
     # --- 20–21. Месячные значения добычи ---
     Q_tagulsk_month = Q_tagul.sum()
@@ -239,7 +240,7 @@ def lodochny(
 # ===============================================================
 def CPPN_1 (
     V_upsv_yu_prev, V_upsv_s_prev, V_upsv_cps_prev, V_upsv_yu_0, V_upsv_s_0, V_upsv_cps_0,
-    V_upsv_yu, V_upsv_s, V_upsv_cps,  V_lodochny_cps_upsv_yu_prev, G_lodochni_upsv_yu,
+    V_upsv_yu, V_upsv_s, V_upsv_cps,  V_lodochny_cps_upsv_yu_prev, V_lodochny_upsv_yu,
     G_sikn_tagul, flag_list, manual_V_upsv_yu, manual_V_upsv_s, manual_V_upsv_cps,
 ):
     V_upsv_yu_prev=_to_float(V_upsv_yu_prev)
@@ -252,8 +253,9 @@ def CPPN_1 (
     V_upsv_s = _to_float(V_upsv_s)
     V_upsv_cps = _to_float(V_upsv_cps)
     V_lodochny_cps_upsv_yu_prev = _to_float(V_lodochny_cps_upsv_yu_prev)
-    V_lodochni_upsv_yu = _to_float(G_lodochni_upsv_yu)
     G_sikn_tagul = _to_float(G_sikn_tagul)
+    V_lodochny_upsv_yu =_to_float(V_lodochny_upsv_yu)
+
 # 35. Расчет наличия нефти в РВС УПСВ-Юг, т:
     if manual_V_upsv_yu is not None:
         V_upsv_yu = manual_V_upsv_yu
@@ -281,7 +283,7 @@ def CPPN_1 (
         if V_upsv_s_prev-1500 <= V_upsv_s <= V_upsv_s_prev+2000:
             print("f")
 # 37. Расчет наличия нефти в РВС ЦПС, т:
-    if V_upsv_cps is not None:
+    if manual_V_upsv_cps is not None:
         V_upsv_cps = V_upsv_cps
     else:
         V_upsv_cps = V_upsv_cps_prev
@@ -298,7 +300,7 @@ def CPPN_1 (
     V_cppn_1 = V_upsv_yu + V_upsv_s + V_upsv_cps
 
 #39. Расчет наличия нефти Лодочного ЛУ в РП на ЦПС и УПСВ - Юг, т:
-    V_lodochny_cps_upsv_yu = V_lodochny_cps_upsv_yu_prev + V_lodochni_upsv_yu - G_sikn_tagul
+    V_lodochny_cps_upsv_yu = V_lodochny_cps_upsv_yu_prev + V_lodochny_upsv_yu - G_sikn_tagul
     return {
         "V_upsv_yu":V_upsv_yu, "V_upsv_s": V_upsv_s, "V_upsv_cps": V_upsv_cps, "V_cppn_1_0": V_cppn_1_0,
         "V_cppn_1": V_cppn_1, "V_lodochny_cps_upsv_yu": V_lodochny_cps_upsv_yu,
@@ -543,11 +545,67 @@ def sikn_1208 (
 
 def TSTN (
         V_gnsp_0,V_gnsp_prev, N, VN_min_gnsp, G_sikn, G_gpns_data, flag_list, V_nps_1_prev, V_nps_2_prev, G_tagul, G_upn_lodochny, G_skn, G_kchng,
-        V_knps_prev, V_nps_1_0, V_nps_2_0, V_knps_0, G_suzun_vslu, K_suzun, V_tstn_vslu_prev, F_suzun_vankor, V_tstn_suzun_vankor_prev, K_vankor,
-        G_buy_day, G_per,
+        V_knps_prev, V_nps_1_0, V_nps_2_0, V_knps_0, G_suzun_vslu, K_suzun,  V_tstn_suzun_vslu_prev, F_suzun_vankor, V_tstn_suzun_vankor_prev, K_vankor,
+        G_buy_day, G_per, F_suzun_vslu, V_suzun_put_0, V_tstn_suzun_prev, G_suzun_slu, V_tstn_skn_prev, F_skn, K_skn, G_ichem, F_vo, V_tstn_vo_prev,
+        K_ichem, F_tng, G_suzun_tng, V_tstn_tng_prev,K_payaha, V_tstn_tagul_prev, F_kchng, K_tagul,V_tstn_kchng_prev, V_tstn_lodochny_prev,
+        G_sikn_tagul, F_tagul_lpu, K_lodochny, V_tstn_rn_vn_prev
           ):
-    F = 0 # не понятно откуда переменная
-    F_suzun_vslu = 0 # по умолчанию
+    F_suzun_vankor = _to_float(F_suzun_vankor)
+    F_tng = _to_float(F_tng)
+    F_vo = _to_float(F_vo)
+    F_kchng = _to_float(F_kchng)
+    V_gnsp_0 = _to_float(V_gnsp_0)
+    V_gnsp_prev = _to_float(V_gnsp_prev)
+    VN_min_gnsp = _to_float(VN_min_gnsp)
+    G_sikn = _to_float(G_sikn)
+    V_nps_1_prev = _to_float(V_nps_1_prev)
+    V_nps_2_prev = _to_float(V_nps_2_prev)
+    G_tagul = _to_float(G_tagul)
+    G_upn_lodochny = _to_float(G_upn_lodochny)
+    G_skn = _to_float(G_skn)
+    G_kchng = _to_float(G_kchng)
+    V_knps_prev = _to_float(V_knps_prev)
+    V_nps_1_0 = _to_float(V_nps_1_0)
+    V_nps_2_0 = _to_float(V_nps_2_0)
+    V_knps_0 = _to_float(V_knps_0)
+    G_suzun_vslu = _to_float(G_suzun_vslu)
+    K_suzun = _to_float(K_suzun)
+    V_tstn_suzun_vslu_prev = _to_float( V_tstn_suzun_vslu_prev)
+    V_tstn_suzun_vankor_prev = _to_float(V_tstn_suzun_vankor_prev)
+    K_vankor = _to_float(K_vankor)
+    F_suzun_vslu = _to_float(F_suzun_vslu)
+    V_suzun_put_0 = _to_float(V_suzun_put_0)
+    V_tstn_suzun_prev = _to_float(V_tstn_suzun_prev)
+    G_suzun_slu = _to_float(G_suzun_slu)
+    V_tstn_skn_prev = _to_float(V_tstn_skn_prev)
+    F_skn = _to_float(F_skn)
+    K_skn = _to_float(K_skn)
+    F_vo = _to_float(F_vo)
+    V_tstn_vo_prev = _to_float(V_tstn_vo_prev)
+    G_suzun_tng = _to_float(G_suzun_tng)
+    V_tstn_tng_prev = _to_float(V_tstn_tng_prev)
+    V_tstn_tagul_prev = _to_float(V_tstn_tagul_prev)
+    V_tstn_kchng_prev = _to_float(V_tstn_kchng_prev)
+    V_tstn_lodochny_prev = _to_float(V_tstn_lodochny_prev)
+    F_tagul_lpu = _to_float(F_tagul_lpu)
+    G_sikn_tagul = _to_float(G_sikn_tagul)
+    V_tstn_rn_vn_prev = _to_float(V_tstn_rn_vn_prev)
+    # ---------- Инициализация-------------
+    V_tsnt_suzun_vankor_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_vslu_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_tagul_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_lodochny_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_rn_vn_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_suzun_vankor_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_suzun_vslu_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_skn_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_vo_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_tng_0 = 123 # Для расчета в будущем подтягиваем из бд
+    V_tstn_kchng_0 = 123 # Для расчета в будущем подтягиваем из бд
+
+    F_suzun = 123 # в таблице параметров нет упоминания откуда брать значения для переменной
+    F = 0 # в таблице параметров нет упоминания откуда брать значения для переменной
+    F_tagul = 123 # в таблице параметров нет упоминания откуда брать значения для переменной
 # 61.	Расчет откачки нефти с ГНПС, т/сут:
     G_gpns_i = G_sikn + (V_gnsp_0 - VN_min_gnsp)/N
     G_gpns_month = G_gpns_data.sum() + G_gpns_i
@@ -604,10 +662,88 @@ def TSTN (
     V_tstn_0 = V_gnsp_0 + V_nps_1_0 + V_nps_2_0 + V_knps_0
     V_tstn = V_gnsp_prev + V_nps_1_prev + V_nps_2_prev + V_knps_prev
 # 67.	Расчет наличия нефти АО «Сузун» (ВСЛУ) в резервуарах ЦТН, т:
-    V_tstn_vslu = V_tstn_vslu_prev - F_suzun_vslu + G_suzun_vslu - F_suzun_vslu * (K_suzun/100)
+    V_tstn_suzun_vslu =  V_tstn_suzun_vslu_prev - F_suzun_vslu + G_suzun_vslu - F_suzun_vslu * (K_suzun/100)
+    if 900 <=  V_tstn_suzun_vslu <= 4000:
+        V_tstn_suzun_vslu =  V_tstn_suzun_vslu
+    else:
+        V_tstn_suzun_vslu = int(input("Введите корректное значение V_tstn_vslu "))
 # 68.	 Расчет наличия нефти АО «Сузун» (Ванкор) в резервуарах ЦТН, т:
-    V_tsnt_suzun_vankor = V_tstn_suzun_vankor_prev - F_suzun_vankor + (G_buy_day - G_per) - F_suzun_vankor * (K_vankor/100)
+    V_tstn_suzun_vankor = V_tstn_suzun_vankor_prev - F_suzun_vankor + (G_buy_day - G_per) - F_suzun_vankor * (K_vankor/100)
+    if 900 <= V_tstn_suzun_vankor <= 5000:
+        V_tstn_suzun_vankor = V_tstn_suzun_vankor
+    else:
+        V_tstn_suzun_vankor = int(input("Введите корректное значение V_tstn_suzun_vankor "))
+# 69.	Расчет наличия нефти АО «Сузун» (Сузун) в резервуарах ЦТН, т:
+    V_tstn_suzun_0 = V_suzun_put_0 - V_tstn_vslu_0 -  V_tsnt_suzun_vankor_0
+    if 2000 <= V_tstn_suzun_0 <= 6000:
+        V_tstn_suzun_0 = V_tstn_suzun_0
+    else:
+        V_tstn_suzun_0 = int(input("Введите корректное значение V_tstn_suzun_0 "))
+    V_tstn_suzun = V_tstn_suzun_prev - F_suzun + G_suzun_slu - F_suzun *(K_suzun/100)
+    if 2000 <= V_tstn_suzun <= 6000:
+        V_tstn_suzun=V_tstn_suzun
+    else:
+        V_tstn_suzun = int(input("Введите корректное значение V_tstn_suzun "))
+# 70.	Расчет наличия нефти ООО «СевКомНефтегаз» в резервуарах ЦТН, т:
+    V_tstn_skn = V_tstn_skn_prev - F_skn + G_skn - F_skn * (K_skn/100)
+    if 3000 <= V_tstn_skn <= 8000:
+        V_tstn_skn=V_tstn_skn
+    else:
+        V_tstn_skn = int(input("Введите корректное значение V_tstn_skn "))
+ # 71. Расчет наличия нефти ООО «Восток Оил» в резервуарах ЦТН, т:
+    V_tstn_vo = V_tstn_vo_prev + G_ichem - F_vo - F_vo * (K_ichem/100)
+    if 1000 <= V_tstn_vo <= 6000:
+        V_tstn_vo = V_tstn_vo
+    else:
+        V_tstn_vo = int(input("Введите корректное значение V_tstn_vo "))
+# 72.	Расчет наличия нефти АО «Таймырнефтегаз» в резервуарах ЦТН, т:
+    V_tstn_tng = V_tstn_tng_prev + G_suzun_tng - F_tng - F_tng * (K_payaha/100)
+    if 300 <= V_tstn_tng <= 6000:
+        V_tstn_tng = V_tstn_tng
+    else:
+        V_tstn_tng = int(input("Введите корректное значение V_tstn_tng "))
+# 73.	Расчет наличия нефти ООО «КЧНГ» (Русско-Реченское месторождение) в резервуарах ЦТН, т:
+    V_tstn_kchng = V_tstn_kchng_prev + G_kchng - F_kchng - F_kchng * (K_tagul/100)
+    if 1000 <= V_tstn_kchng <= 6000:
+        V_tstn_kchng = V_tstn_kchng
+    else:
+        V_tstn_kchng = int(input("Введите корректное значение V_tstn_kchng "))
+# 74.	Расчет наличия нефти ООО «Тагульское» (Тагульский ЛУ) в резервуарах ЦТН, т:
+    V_tstn_tagul = V_tstn_tagul_prev + G_tagul - F_tagul - F_tagul * (K_tagul/100)
+    if 4000 <= V_tstn_tagul <= 12000:
+        V_tstn_tagul = V_tstn_tagul
+    else:
+        V_tstn_tagul = int(input("Введите корректное значение V_tstn_tagul "))
+# 75.	Расчет наличия нефти ООО «Тагульское» (Лодочный ЛУ) в резервуарах ЦТН, т:
+    V_tstn_lodochny = V_tstn_lodochny_prev + G_sikn_tagul - F_tagul_lpu - F_tagul_lpu * (K_lodochny/100)
+    if 3000 <= V_tstn_lodochny <= 11000:
+        V_tstn_lodochny = V_tstn_lodochny
+    else:
+        V_tstn_lodochny = int(input("Введите корректное значение V_tstn_lodochny "))
+# 76.	Расчет наличия нефти ООО «Тагульское» (Всего) в резервуарах ЦТН, т:
+    V_tstn_tagul_obsh_0 = V_tstn_tagul_0 + V_tstn_lodochny_0
+    V_tstn_tagul_obsh = V_tstn_tagul + V_tstn_lodochny
+    if 3000 <= V_tstn_tagul <= 11000:
+        V_tstn_tagul = V_tstn_tagul
+    else:
+        V_tstn_tagul = int(input("Введите корректное значение V_tstn_tagul "))
+# 77.	Расчет наличия нефти ООО «РН-Ванкор» в резервуарах ЦТН (мертвые остатки в резервуарах), т:
+    V_tstn_rn_vn = V_tstn_rn_vn_prev
+# 78.	Расчет наличия нефти АО «Ванкорнефть» в резервуарах ЦТН, т:
+    V_tstn_vn_0 = V_tstn_0 - V_tstn_rn_vn_0 - V_tstn_suzun_0 - V_tstn_tagul_obsh_0 - V_tstn_suzun_vankor_0 - V_tstn_suzun_vslu_0 - V_tstn_skn_0 - V_tstn_vo_0 - V_tstn_tng_0 - V_tstn_kchng_0
+    if 4000 <= V_tstn_vn_0 <= 11000:
+        V_tstn_vn_0 = V_tstn_vn_0
+    else:
+        V_tstn_vn_0 = int(input("Введите корректное значение V_tstn_vn_0 "))
+    V_tstn_vn = V_tstn - V_tstn_rn_vn - V_tstn_suzun - V_tstn_tagul_obsh - V_tstn_suzun_vankor -  V_tstn_suzun_vslu - V_tstn_skn - V_tstn_vo - V_tstn_tng - V_tstn_kchng
+    if 4000 <= V_tstn_vn <= 11000:
+        V_tstn_vn = V_tstn_vn
+    else:
+        V_tstn_vn = int(input("Введите корректное значение V_tstn_vn "))
     return {
         "G_gpns_i":G_gpns_i, "G_gpns_month":G_gpns_month, "G_gpns":G_gpns, "V_gnsp":V_gnsp, "V_nps_1":V_nps_1, "V_nps_2":V_nps_2, "V_knsp":V_knsp,
-        "V_tstn_0":V_tstn_0, "V_tstn":V_tstn, "V_tstn_vslu":V_tstn_vslu, "V_tsnt_suzun_vankor":V_tsnt_suzun_vankor
+        "V_tstn_0":V_tstn_0, "V_tstn":V_tstn, " V_tstn_suzun_vslu": V_tstn_suzun_vslu, "V_tstn_suzun_vankor":V_tstn_suzun_vankor, "V_tstn_suzun_0":V_tstn_suzun_0,
+        "V_tstn_suzun":V_tstn_suzun, "V_tstn_skn":V_tstn_skn,"V_tstn_vo":V_tstn_vo, "V_tstn_tng":V_tstn_tng, "V_tstn_kchng":V_tstn_kchng,
+        "V_tstn_tagul":V_tstn_tagul, "V_tstn_lodochny":V_tstn_lodochny, "V_tstn_tagul_obsh":V_tstn_tagul_obsh, "V_tstn_tagul_obsh_0":V_tstn_tagul_obsh_0,
+        "V_tstn_rn_vn":V_tstn_rn_vn, "V_tstn_vn":V_tstn_vn, "V_tstn_vn_0":V_tstn_vn_0
     }
