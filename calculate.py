@@ -543,7 +543,8 @@ def sikn_1208 (
 
 def TSTN (
         V_gnsp_0,V_gnsp_prev, N, VN_min_gnsp, G_sikn, G_gpns_data, flag_list, V_nps_1_prev, V_nps_2_prev, G_tagul, G_upn_lodochny, G_skn, G_kchng,
-        V_knps_prev, V_nps_1_0, V_nps_2_0, V_knps_0, G_suzun_vslu, K_suzun, V_tstn_vslu_prev
+        V_knps_prev, V_nps_1_0, V_nps_2_0, V_knps_0, G_suzun_vslu, K_suzun, V_tstn_vslu_prev, F_suzun_vankor, V_tstn_suzun_vankor_prev, K_vankor,
+        G_buy_day, G_per,
           ):
     F = 0 # не понятно откуда переменная
     F_suzun_vslu = 0 # по умолчанию
@@ -603,8 +604,10 @@ def TSTN (
     V_tstn_0 = V_gnsp_0 + V_nps_1_0 + V_nps_2_0 + V_knps_0
     V_tstn = V_gnsp_prev + V_nps_1_prev + V_nps_2_prev + V_knps_prev
 # 67.	Расчет наличия нефти АО «Сузун» (ВСЛУ) в резервуарах ЦТН, т:
-    V_tstn_vslu = V_tstn_vslu_prev - F_suzun_vslu + G_suzun_vslu - F_suzun_vslu * K_suzun/100
+    V_tstn_vslu = V_tstn_vslu_prev - F_suzun_vslu + G_suzun_vslu - F_suzun_vslu * (K_suzun/100)
+# 68.	 Расчет наличия нефти АО «Сузун» (Ванкор) в резервуарах ЦТН, т:
+    V_tsnt_suzun_vankor = V_tstn_suzun_vankor_prev - F_suzun_vankor + (G_buy_day - G_per) - F_suzun_vankor * (K_vankor/100)
     return {
         "G_gpns_i":G_gpns_i, "G_gpns_month":G_gpns_month, "G_gpns":G_gpns, "V_gnsp":V_gnsp, "V_nps_1":V_nps_1, "V_nps_2":V_nps_2, "V_knsp":V_knsp,
-        "V_tstn_0":V_tstn_0, "V_tstn":V_tstn,
+        "V_tstn_0":V_tstn_0, "V_tstn":V_tstn, "V_tstn_vslu":V_tstn_vslu, "V_tsnt_suzun_vankor":V_tsnt_suzun_vankor
     }

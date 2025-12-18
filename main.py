@@ -4,9 +4,9 @@ import calculate
 from loader import build_all_data, get_day
 from data_prep import (
     prepare_suzun_data, prepare_vo_data, prepare_kchng_data,
-    prepare_lodochny_data, prepare_cppn1_data, prepare_rn_vankor_data ,prepare_sikn_1208_data, prepare_TSTN_data, get_TSTN_inputs
+    prepare_lodochny_data, prepare_cppn1_data, prepare_rn_vankor_data ,prepare_sikn_1208_data, prepare_TSTN_data
 )
-from inputs import get_suzun_inputs, get_lodochny_inputs, get_cppn_1_inputs, get_rn_vankor_inputs,get_sikn_1208_inputs
+from inputs import get_suzun_inputs, get_lodochny_inputs, get_cppn_1_inputs, get_rn_vankor_inputs,get_sikn_1208_inputs, get_TSTN_inputs
 from excel_export import export_to_excel
 
 def assign_results_to_master(master_df, n, results):

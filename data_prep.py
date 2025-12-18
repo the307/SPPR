@@ -249,10 +249,11 @@ def prepare_TSTN_data (master_df, n,prev_days,prev_month,m,N,sikn_1208_results,l
     V_nps_1_prev = master_df.loc[master_df["date"] == prev_days, "V_nps_1"].values
     V_nps_2_prev = master_df.loc[master_df["date"] == prev_days, "V_nps_2"].values
     V_tstn_vslu_prev = master_df.loc[master_df["date"] == prev_days, "V_nps_2"].values
+    V_tstn_suzun_vankor_prev = master_df.loc[master_df["date"] == prev_days, "V_tstn_suzun_vankor"].values
 
-    G_gpns_data = master_df.loc[master_df["date"] == m, "G_gpns_data"].values
+    G_gpns_data = master_df.loc[master_df["date"].dt.month == m, "G_gpns_data"].values
+    F_suzun_vankor = master_df.loc[master_df["date"].dt.month == m, "suzun_vankor"].values
 
-    F_suzun_vslu = master_df.loc[master_df["date"] == prev_days, "suzun_vslu"].values
 
     VN_min_gnsp = 2686.761
     flag_list = [0,0,0,0]
@@ -274,7 +275,10 @@ def prepare_TSTN_data (master_df, n,prev_days,prev_month,m,N,sikn_1208_results,l
         "V_nps_1_0":V_nps_1_0,
         "V_nps_2_0":V_nps_2_0,
         "V_knps_0":V_knps_0,
-        "F_suzun_vslu":F_suzun_vslu,
         "G_suzun_vslu": suzun_results.get("G_suzun_vslu", 0),
         "V_tstn_vslu_prev":V_tstn_vslu_prev,
+        "F_suzun_vankor":F_suzun_vankor,
+        "V_tstn_suzun_vankor_prev":V_tstn_suzun_vankor_prev,
+        "G_buy_day":suzun_results.get("G_buy_day", 0),
+        "G_per":suzun_results.get("G_per", 0),
     }
