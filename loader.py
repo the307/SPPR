@@ -36,19 +36,12 @@ def safe_to_datetime(val):
 def ensure_list(x):
     return x if isinstance(x, list) else [x]
 def get_day():
-    date_input = input("Введите дату (ДД.ММ.ГГГГ): ")
-    try:
-        date = datetime.strptime(date_input, "%d.%m.%Y")
-    except ValueError:
-        raise ValueError("Некорректный ввод даты")
-    month = date.month
-    year = date.year
-    day = date.day
+    """Возвращает список дат для текущего месяца."""
+    today = datetime.now().replace(day=1)  # Первый день текущего месяца
+    year, month = today.year, today.month
     total_days = calendar.monthrange(year, month)[1]
-    prev_day = date - timedelta(days=1)
-    prev_month = date.replace(day=1)
-    last_day_prev_month = prev_month - pd.Timedelta(days=1)
-    return date, total_days, month, prev_day, last_day_prev_month, day
+    dates = [today + timedelta(days=i) for i in range(total_days)]
+    return dates
 # -------------------------
 # Загрузка и подготовка одного файла
 # -------------------------
