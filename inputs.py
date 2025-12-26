@@ -1,3 +1,48 @@
+"""
+МОДУЛЬ РАБОТЫ С КОНФИГУРАЦИЕЙ input.json
+
+Этот модуль обеспечивает централизованный доступ к конфигурации из input.json.
+Все функции input() были заменены на чтение из этого файла.
+
+ЛОГИКА РАБОТЫ:
+---------------
+1. _load_config() - загружает input.json:
+   - Использует глобальный кэш (_config) для однократной загрузки
+   - Обрабатывает ошибки чтения файла
+   - Возвращает пустой словарь, если файл не найден
+
+2. ФУНКЦИИ ПОЛУЧЕНИЯ ВХОДНЫХ ДАННЫХ:
+   Каждая функция get_*_inputs() извлекает данные для соответствующего блока:
+   
+   - get_suzun_inputs() - параметры для блока СУЗУН
+   - get_lodochny_inputs() - параметры для блока ЛОДОЧНЫЙ
+   - get_cppn_1_inputs() - параметры для блока ЦППН-1
+   - get_rn_vankor_inputs() - параметры для блока РН-ВАНКОР
+   - get_sikn_1208_inputs() - параметры для блока СИКН-1208
+   - get_TSTN_inputs() - параметры для блока ТСТН
+
+3. ФУНКЦИИ ВАЛИДАЦИИ:
+   
+   - get_validation_config() - параметры автоматической валидации
+   - get_manual_corrections() - значения для ручной коррекции
+   - get_validation_value() - получение конкретного значения коррекции
+   - get_delivery_period() - периодичность сдачи (e) для блоков
+
+СТРУКТУРА input.json:
+---------------------
+{
+  "suzun": { ... },           # Параметры блока СУЗУН
+  "lodochny": { ... },        # Параметры блока ЛОДОЧНЫЙ
+  "monthly_data": { ... },    # Месячные данные (используются в data_prep.py)
+  "validation": { ... },       # Параметры валидации
+  "manual_corrections": { ... } # Ручные коррекции при ошибках валидации
+}
+
+ЗНАЧЕНИЯ ПО УМОЛЧАНИЮ:
+----------------------
+- Если ключ отсутствует в input.json, используется значение по умолчанию
+- Если значение = null, используется значение из расчетов или master_df
+"""
 import json
 from pathlib import Path
 
@@ -119,3 +164,34 @@ def get_manual_corrections():
     config = _load_config()
     corrections = config.get("manual_corrections", {})
     return corrections
+
+def get_validation_value(key, default=None):
+    """Получает значение для валидации из input.json.
+    
+    Args:
+        key: ключ в разделе manual_corrections
+        default: значение по умолчанию, если ключ отсутствует
+    
+    Returns:
+        Значение из input.json или default
+    """
+    config = _load_config()
+    corrections = config.get("manual_corrections", {})
+    value = corrections.get(key, default)
+    if value is not None:
+        return value
+    return default
+
+def get_delivery_period(block_name):
+    """Получает периодичность сдачи (e) для блока из input.json.
+    
+    Args:
+        block_name: имя блока ("suzun_vankor", "vo", "kchng")
+    
+    Returns:
+        Периодичность сдачи (int)
+    """
+    config = _load_config()
+    validation = config.get("validation", {})
+    key = f"delivery_period_e_{block_name}"
+    return validation.get(key, 7)  # По умолчанию 7

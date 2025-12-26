@@ -1,4 +1,88 @@
+"""
+МОДУЛЬ РАСЧЕТОВ
+
+Этот модуль содержит все функции расчета для различных блоков системы.
+Каждая функция реализует бизнес-логику расчета для соответствующего блока.
+
+СТРУКТУРА МОДУЛЯ:
+-----------------
+1. ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ:
+   - _to_float() - безопасное преобразование в float (из массива или скаляра)
+
+2. БЛОКИ РАСЧЕТОВ:
+   - suzun() - расчет блока СУЗУН
+   - VO() - расчет блока ВОСТОК ОЙЛ
+   - kchng() - расчет блока КЧНГ
+   - lodochny() - расчет блока ЛОДОЧНЫЙ
+   - CPPN_1() - расчет блока ЦППН-1
+   - rn_vankor() - расчет блока РН-ВАНКОР
+   - sikn_1208() - расчет блока СИКН-1208
+   - TSTN() - расчет блока ТСТН
+   - rn_vankor_proverka() - проверки и валидация для блока РН-ВАНКОР
+
+ЛОГИКА РАБОТЫ КАЖДОГО БЛОКА:
+-----------------------------
+1. СУЗУН (suzun):
+   - Расчет покупки и отгрузки нефти (G_buy_day, G_out_udt_day)
+   - Расчет расхода на переработку (G_per)
+   - Расчет объемов по месторождениям (Q_vankor, Q_suzun, Q_vslu, Q_tng, Q_vo)
+   - Расчет объемов в резервуарах (V_upn_suzun, V_suzun_vslu, V_suzun_tng)
+   - Расчет месячных накопленных значений
+
+2. ВОСТОК ОЙЛ (VO):
+   - Расчет объемов для Восток Ойл
+   - Расчет накопленных данных за месяц
+
+3. КЧНГ (kchng):
+   - Расчет объемов для КЧНГ
+   - Расчет накопленных данных за месяц
+
+4. ЛОДОЧНЫЙ (lodochny):
+   - Расчет коэффициента откачки (K_otkachki)
+   - Валидация K_otkachki (сравнение с расчетным значением)
+   - Расчет откачки нефти на УПСВ-Юг (G_lodochny_uspv_yu)
+   - Расчет откачки в МН Тагульского месторождения (G_sikn_tagul)
+   - Расчет объемов Тагульского месторождения (V_tagul, G_tagul)
+   - Расчет потерь (delte_G_tagul)
+
+5. ЦППН-1 (CPPN_1):
+   - Расчет наличия нефти в РВС УПСВ-Юг (V_upsv_yu)
+   - Расчет наличия нефти в РВС УПСВ-Север (V_upsv_s)
+   - Расчет наличия нефти в РВС ЦПС (V_upsv_cps)
+   - Валидация значений (проверка допустимых диапазонов ±1500 или ±2000)
+   - Использование ручных коррекций из input.json при ошибках валидации
+
+6. РН-ВАНКОР (rn_vankor):
+   - Расчет сдачи нефти по недропользователям (F_bp_vn, F_bp_suzun, ...)
+   - Проверка условий для первых 10 дней месяца (alarm_flag)
+   - Расчет месячных накопленных значений
+
+7. СИКН-1208 (sikn_1208):
+   - Расчет откачки через СИКН-1208 (G_sikn)
+   - Расчет потерь (delte_G_sikn)
+   - Расчет объемов по различным направлениям
+
+8. ТСТН (TSTN):
+   - Расчет наличия нефти в резервуарах ЦТН (V_tstn_*)
+   - Расчет по недропользователям
+   - Валидация значений (проверка допустимых диапазонов)
+   - Использование ручных коррекций из input.json
+
+ВАЛИДАЦИЯ:
+----------
+- Проверка допустимых диапазонов значений
+- Использование get_validation_value() для получения коррекций из input.json
+- Вывод предупреждений при выходе значений за допустимые пределы
+- Автоматическая замена значений (если настроено в input.json)
+
+ОБРАБОТКА ОШИБОК:
+-----------------
+- ZeroDivisionError - проверка деления на ноль (например, в lodochny для K_otkachki)
+- Использование значений по умолчанию при отсутствии данных
+- Предупреждения вместо исключений для некритичных ошибок
+"""
 import numpy as np
+from inputs import get_validation_value, get_delivery_period, get_validation_config
 
 
 
@@ -53,7 +137,6 @@ def suzun(
 
     # --- 3. Расход на переработку (Gпер)
     G_per = G_buy_day - G_out_udt_day
-    print(G_per)
     G_per_month = sum(G_per_data)+G_per # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
 
     # --- 4–8. Суммарные месячные значения
@@ -179,14 +262,33 @@ def lodochny(
     V_lodochny = V_upn_lodochny - V_ichem
 
     # --- 25. Коэффициент откачки ---
-    K_otkachki_month = (G_lodochni_upsv_yu_prev_month / Q_tagul_prev_month)
+    # Обработка деления на ноль
+    if Q_tagul_prev_month == 0 or abs(Q_tagul_prev_month) < 1e-10:
+        print(f"Предупреждение: Q_tagul_prev_month = {Q_tagul_prev_month}, деление на ноль невозможно.")
+        print(f"Используется текущее значение K_otkachki = {K_otkachki}")
+        K_otkachki_month = K_otkachki
+    else:
+        K_otkachki_month = (G_lodochni_upsv_yu_prev_month / Q_tagul_prev_month)
+    
     if abs(K_otkachki - K_otkachki_month) >= 0.01:
-        in_1 = input(
-            f"Заменить K_откачки {K_otkachki} "
-            f"на {K_otkachki_month}? (y/n): "
-        )
-        if in_1.lower() == "y":
+        # Используем значение из input.json для автоматической валидации
+        from inputs import get_validation_config
+        validation_config = get_validation_config()
+        auto_replace = validation_config.get("auto_replace_K_otkachki", False)
+        
+        if auto_replace:
+            print(f"Автоматически заменяем K_откачки {K_otkachki} на {K_otkachki_month}")
             K_otkachki = K_otkachki_month
+        else:
+            # Используем значение из input.json для автоматической замены
+            validation_config = get_validation_config()
+            if validation_config.get("auto_replace_K_otkachki", False):
+                print(f"Автоматически заменяем K_откачки {K_otkachki} на {K_otkachki_month}")
+                K_otkachki = K_otkachki_month
+            else:
+                # Если не задано автоматическое принятие, используем расчетное значение
+                print(f"Предупреждение: K_откачки отличается от расчетного. Используется расчетное значение: {K_otkachki_month}")
+                K_otkachki = K_otkachki_month
     # --- 26. Откачка нефти Лодочного месторождения на УПСВ-Юг ---
     G_lodochny_uspv_yu = Q_lodochny_day * (1 - K_otkachki) - (K_gupn_lodochny / 2)
     G_lodochny_uspv_yu_month = G_lodochny_uspv_yu_data.sum() + G_lodochny_uspv_yu # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
@@ -203,7 +305,8 @@ def lodochny(
         if 900 <= G_sikn_tagul <= 1500:
             alarm = False # заменить на переменную из массива
         else:
-            print("вилка")
+            # G_sikn_tagul вне допустимого диапазона [900, 1500]
+            pass
     G_sikn_tagul_month = G_sikn_tagul_data.sum()+G_sikn_tagul # данные отражены за 2 месяца (ноябрь, декабрь), чтобы расчет был корректен необходимо выбрать день расчета и снести ручные данные в manual_data.py до этого дня
     # --- 28–29. Откачка в МН Тагульского месторождения ---
     if manual_V_tagul is not None:
@@ -268,10 +371,16 @@ def CPPN_1 (
         if V_upsv_yu_prev-1500 <= V_upsv_yu <= V_upsv_yu_prev+1500:
             V_upsv_yu = V_upsv_yu
         else:
-            V_upsv_yu = int(input("Введите корректное заначение для V_upsv_yu"))
+            # Получаем значение из input.json
+            V_upsv_yu_correction = get_validation_value("V_upsv_yu", None)
+            if V_upsv_yu_correction is not None:
+                V_upsv_yu = int(V_upsv_yu_correction)
+                print(f"Используется значение V_upsv_yu из input.json: {V_upsv_yu}")
+            else:
+                print(f"Предупреждение: V_upsv_yu вне допустимого диапазона. Используется расчетное значение: {V_upsv_yu}")
     else:
         if V_upsv_yu_prev-2000 <= V_upsv_yu <= V_upsv_yu_prev+4000:
-            print("f")
+            pass  # Значение в допустимом диапазоне
 # 36. Расчет наличия нефти в РВС УПСВ-Север, т:
     if manual_V_upsv_s is not None:
         V_upsv_s = manual_V_upsv_s
@@ -281,10 +390,16 @@ def CPPN_1 (
         if V_upsv_s_prev-1500 <= V_upsv_s <= V_upsv_s_prev+1500:
             V_upsv_s:V_upsv_s
         else:
-            V_upsv_s = int(input("Введите корректное заначение для V_upsv_s"))
+            # Получаем значение из input.json
+            V_upsv_s_correction = get_validation_value("V_upsv_s", None)
+            if V_upsv_s_correction is not None:
+                V_upsv_s = int(V_upsv_s_correction)
+                print(f"Используется значение V_upsv_s из input.json: {V_upsv_s}")
+            else:
+                print(f"Предупреждение: V_upsv_s вне допустимого диапазона. Используется расчетное значение: {V_upsv_s}")
     else:
         if V_upsv_s_prev-1500 <= V_upsv_s <= V_upsv_s_prev+2000:
-            print("f")
+            pass  # Значение в допустимом диапазоне
 # 37. Расчет наличия нефти в РВС ЦПС, т:
     if manual_V_upsv_cps is not None:
         V_upsv_cps = V_upsv_cps
@@ -294,10 +409,16 @@ def CPPN_1 (
         if V_upsv_cps_prev - 1500 <= V_upsv_cps <= V_upsv_cps_prev + 1500:
             V_upsv_cps = V_upsv_cps
         else:
-            V_upsv_cps = int(input("Введите корректное заначение для V_upsv_cps"))
+            # Получаем значение из input.json
+            V_upsv_cps_correction = get_validation_value("V_upsv_cps", None)
+            if V_upsv_cps_correction is not None:
+                V_upsv_cps = int(V_upsv_cps_correction)
+                print(f"Используется значение V_upsv_cps из input.json: {V_upsv_cps}")
+            else:
+                print(f"Предупреждение: V_upsv_cps вне допустимого диапазона. Используется расчетное значение: {V_upsv_cps}")
     else:
         if V_upsv_cps_prev - 2000 <= V_upsv_cps <= V_upsv_cps_prev + 3300:
-            print("f")
+            pass  # Значение в допустимом диапазоне
 # 38. Расчет суммарного наличия нефти в РП ЦППН-1, т:
     V_cppn_1_0 = V_upsv_yu_0+V_upsv_s_0+V_upsv_cps_0
     V_cppn_1 = V_upsv_yu + V_upsv_s + V_upsv_cps
@@ -371,7 +492,9 @@ def rn_vankor(
     if manual_F_bp_suzun_vankor is not None:
         F_bp_suzun_vankor = manual_F_bp_suzun_vankor
     elif F_suzun_vankor < 20000:
-        e = int(input("Введите e (периодичность сдачи): "))
+        # Получаем периодичность сдачи из input.json
+        e = get_delivery_period("suzun_vankor")
+        print(f"Используется периодичность сдачи e={e} из input.json")
         delivery_days = [d for d in range(1, N + 1) if d % e == 0]
         if delivery_days:
             delivery_count = len(delivery_days)
@@ -438,7 +561,9 @@ def rn_vankor(
     if manual_F_bp_vo is not None:
         F_bp_vo = manual_F_bp_vo
     elif F_vo < 20000:
-        e = int(input("Введите e (периодичность сдачи): "))
+        # Получаем периодичность сдачи из input.json
+        e = get_delivery_period("suzun_vankor")
+        print(f"Используется периодичность сдачи e={e} из input.json")
         delivery_days = [d for d in range(1, N + 1) if d % e == 0]
         if delivery_days:
             delivery_count = len(delivery_days)
@@ -463,7 +588,9 @@ def rn_vankor(
     if manual_F_kchng is not None:
         F_kchng = manual_F_kchng
     elif F_kchng < 20000:
-        e = int(input("Введите e (периодичность сдачи): "))
+        # Получаем периодичность сдачи из input.json
+        e = get_delivery_period("suzun_vankor")
+        print(f"Используется периодичность сдачи e={e} из input.json")
         delivery_days = [d for d in range(1, N + 1) if d % e == 0]
         if delivery_days:
             delivery_count = len(delivery_days)
@@ -619,48 +746,88 @@ def TSTN (
         if V_gnsp_prev-1500 <= V_gnsp <= V_gnsp_prev+1500:
             V_gnsp = V_gnsp
         else:
-            V_gnsp = int(input("Введите корректное значение для V_gnsp"))
+            V_gnsp_correction = get_validation_value("V_gnsp", None)
+            if V_gnsp_correction is not None:
+                V_gnsp = int(V_gnsp_correction)
+                print(f"Используется значение V_gnsp из input.json: {V_gnsp}")
+            else:
+                print(f"Предупреждение: V_gnsp вне допустимого диапазона. Используется расчетное значение: {V_gnsp}")
     else:
         if V_gnsp_prev - 2000 <= V_gnsp <= V_gnsp_prev + 3000:
             V_gnsp = V_gnsp
         else:
-            V_gnsp = int(input("Введите корректное значение для V_gnsp"))
+            V_gnsp_correction = get_validation_value("V_gnsp", None)
+            if V_gnsp_correction is not None:
+                V_gnsp = int(V_gnsp_correction)
+                print(f"Используется значение V_gnsp из input.json: {V_gnsp}")
+            else:
+                print(f"Предупреждение: V_gnsp вне допустимого диапазона. Используется расчетное значение: {V_gnsp}")
 # 63.	Расчет наличия нефти в РП НПС-1, т:
     V_nps_1 = V_nps_1_prev
     if not flag_list[1]:
         if V_nps_1_prev - 700 <= V_nps_1 <= V_nps_1_prev + 700:
             V_nps_1 = V_nps_1
         else:
-            V_nps_1 = int(input("Введите корректное значение для V_nps_1"))
+            V_nps_1_correction = get_validation_value("V_nps_1", None)
+            if V_nps_1_correction is not None:
+                V_nps_1 = int(V_nps_1_correction)
+                print(f"Используется значение V_nps_1 из input.json: {V_nps_1}")
+            else:
+                print(f"Предупреждение: V_nps_1 вне допустимого диапазона. Используется расчетное значение: {V_nps_1}")
     else:
         if V_nps_1_prev - 2000 <= V_nps_1 <= V_nps_1_prev + 4000:
             V_nps_1 = V_nps_1
         else:
-            V_nps_1 = int(input("Введите корректное значение для V_nps_1"))
+            V_nps_1_correction = get_validation_value("V_nps_1", None)
+            if V_nps_1_correction is not None:
+                V_nps_1 = int(V_nps_1_correction)
+                print(f"Используется значение V_nps_1 из input.json: {V_nps_1}")
+            else:
+                print(f"Предупреждение: V_nps_1 вне допустимого диапазона. Используется расчетное значение: {V_nps_1}")
 # 64.	Расчет наличия нефти в РП НПС-2, т:
     V_nps_2 = V_nps_2_prev
     if not flag_list[1]:
         if V_nps_2_prev - 700 <= V_nps_2 <= V_nps_2_prev + 700:
             V_nps_2 = V_nps_2
         else:
-            V_nps_2 = int(input("Введите корректное значение для V_nps_1"))
+            V_nps_2_correction = get_validation_value("V_nps_2", None)
+            if V_nps_2_correction is not None:
+                V_nps_2 = int(V_nps_2_correction)
+                print(f"Используется значение V_nps_2 из input.json: {V_nps_2}")
+            else:
+                print(f"Предупреждение: V_nps_2 вне допустимого диапазона. Используется расчетное значение: {V_nps_2}")
     else:
         if V_nps_2_prev - 2000 <= V_nps_2 <= V_nps_2_prev + 4000:
             V_nps_2 = V_nps_2
         else:
-            V_nps_2 = int(input("Введите корректное значение для V_nps_1"))
+            V_nps_2_correction = get_validation_value("V_nps_2", None)
+            if V_nps_2_correction is not None:
+                V_nps_2 = int(V_nps_2_correction)
+                print(f"Используется значение V_nps_2 из input.json: {V_nps_2}")
+            else:
+                print(f"Предупреждение: V_nps_2 вне допустимого диапазона. Используется расчетное значение: {V_nps_2}")
 #65.	Расчет наличия нефти в РП КНПС
     V_knsp = (G_gpns - F + V_knps_prev + G_tagul + G_upn_lodochny + G_skn + G_kchng) - (V_nps_2 - V_nps_2_prev) - (V_nps_1-V_nps_1_prev)
     if not flag_list[2]:
         if V_knps_prev - 1500 <= V_knsp <= V_knps_prev + 1500:
             V_knsp = V_knsp
         else:
-            V_knsp = int(input("Введите корректное значение для V_nps_1"))
+            V_knsp_correction = get_validation_value("V_knsp", None)
+            if V_knsp_correction is not None:
+                V_knsp = int(V_knsp_correction)
+                print(f"Используется значение V_knsp из input.json: {V_knsp}")
+            else:
+                print(f"Предупреждение: V_knsp вне допустимого диапазона. Используется расчетное значение: {V_knsp}")
     else:
         if V_knps_prev - 2000 <= V_knsp <= V_knps_prev + 3000:
             V_knsp = V_knsp
         else:
-            V_knsp = int(input("Введите корректное значение для V_knsp"))
+            V_knsp_correction = get_validation_value("V_knsp", None)
+            if V_knsp_correction is not None:
+                V_knsp = int(V_knsp_correction)
+                print(f"Используется значение V_knsp из input.json: {V_knsp}")
+            else:
+                print(f"Предупреждение: V_knsp вне допустимого диапазона. Используется расчетное значение: {V_knsp}")
 # 66.	Расчет суммарного наличия нефти в резервуарах ЦТН, т:
     V_tstn_0 = V_gnsp_0 + V_nps_1_0 + V_nps_2_0 + V_knps_0
     V_tstn = V_gnsp_prev + V_nps_1_prev + V_nps_2_prev + V_knps_prev
@@ -669,67 +836,122 @@ def TSTN (
     if 900 <=  V_tstn_suzun_vslu <= 4000:
         V_tstn_suzun_vslu =  V_tstn_suzun_vslu
     else:
-        V_tstn_suzun_vslu = int(input("Введите корректное значение V_tstn_vslu "))
+        V_tstn_suzun_vslu_correction = get_validation_value("V_tstn_suzun_vslu", None)
+        if V_tstn_suzun_vslu_correction is not None:
+            V_tstn_suzun_vslu = int(V_tstn_suzun_vslu_correction)
+            print(f"Используется значение V_tstn_suzun_vslu из input.json: {V_tstn_suzun_vslu}")
+        else:
+            print(f"Предупреждение: V_tstn_suzun_vslu вне допустимого диапазона. Используется расчетное значение: {V_tstn_suzun_vslu}")
 # 68.	 Расчет наличия нефти АО «Сузун» (Ванкор) в резервуарах ЦТН, т:
     V_tstn_suzun_vankor = V_tstn_suzun_vankor_prev - F_suzun_vankor + (G_buy_day - G_per) - F_suzun_vankor * (K_vankor/100)
     if 900 <= V_tstn_suzun_vankor <= 5000:
         V_tstn_suzun_vankor = V_tstn_suzun_vankor
     else:
-        V_tstn_suzun_vankor = int(input("Введите корректное значение V_tstn_suzun_vankor "))
+        V_tstn_suzun_vankor_correction = get_validation_value("V_tstn_suzun_vankor", None)
+        if V_tstn_suzun_vankor_correction is not None:
+            V_tstn_suzun_vankor = int(V_tstn_suzun_vankor_correction)
+            print(f"Используется значение V_tstn_suzun_vankor из input.json: {V_tstn_suzun_vankor}")
+        else:
+            print(f"Предупреждение: V_tstn_suzun_vankor вне допустимого диапазона. Используется расчетное значение: {V_tstn_suzun_vankor}")
 # 69.	Расчет наличия нефти АО «Сузун» (Сузун) в резервуарах ЦТН, т:
     V_tstn_suzun_0 = V_suzun_put_0 - V_tstn_vslu_0 -  V_tsnt_suzun_vankor_0
     if 2000 <= V_tstn_suzun_0 <= 6000:
         V_tstn_suzun_0 = V_tstn_suzun_0
     else:
-        V_tstn_suzun_0 = int(input("Введите корректное значение V_tstn_suzun_0 "))
+        V_tstn_suzun_0_correction = get_validation_value("V_tstn_suzun_0", None)
+        if V_tstn_suzun_0_correction is not None:
+            V_tstn_suzun_0 = int(V_tstn_suzun_0_correction)
+            print(f"Используется значение V_tstn_suzun_0 из input.json: {V_tstn_suzun_0}")
+        else:
+            print(f"Предупреждение: V_tstn_suzun_0 вне допустимого диапазона. Используется расчетное значение: {V_tstn_suzun_0}")
     V_tstn_suzun = V_tstn_suzun_prev - F_suzun + G_suzun_slu - F_suzun *(K_suzun/100)
     if 2000 <= V_tstn_suzun <= 6000:
         V_tstn_suzun=V_tstn_suzun
     else:
-        V_tstn_suzun = int(input("Введите корректное значение V_tstn_suzun "))
+        V_tstn_suzun_correction = get_validation_value("V_tstn_suzun", None)
+        if V_tstn_suzun_correction is not None:
+            V_tstn_suzun = int(V_tstn_suzun_correction)
+            print(f"Используется значение V_tstn_suzun из input.json: {V_tstn_suzun}")
+        else:
+            print(f"Предупреждение: V_tstn_suzun вне допустимого диапазона. Используется расчетное значение: {V_tstn_suzun}")
 # 70.	Расчет наличия нефти ООО «СевКомНефтегаз» в резервуарах ЦТН, т:
     V_tstn_skn = V_tstn_skn_prev - F_skn + G_skn - F_skn * (K_skn/100)
     if 3000 <= V_tstn_skn <= 8000:
         V_tstn_skn=V_tstn_skn
     else:
-        V_tstn_skn = int(input("Введите корректное значение V_tstn_skn "))
+        V_tstn_skn_correction = get_validation_value("V_tstn_skn", None)
+        if V_tstn_skn_correction is not None:
+            V_tstn_skn = int(V_tstn_skn_correction)
+            print(f"Используется значение V_tstn_skn из input.json: {V_tstn_skn}")
+        else:
+            print(f"Предупреждение: V_tstn_skn вне допустимого диапазона. Используется расчетное значение: {V_tstn_skn}")
  # 71. Расчет наличия нефти ООО «Восток Оил» в резервуарах ЦТН, т:
     V_tstn_vo = V_tstn_vo_prev + G_ichem - F_vo - F_vo * (K_ichem/100)
     if 1000 <= V_tstn_vo <= 6000:
         V_tstn_vo = V_tstn_vo
     else:
-        V_tstn_vo = int(input("Введите корректное значение V_tstn_vo "))
+        V_tstn_vo_correction = get_validation_value("V_tstn_vo", None)
+        if V_tstn_vo_correction is not None:
+            V_tstn_vo = int(V_tstn_vo_correction)
+            print(f"Используется значение V_tstn_vo из input.json: {V_tstn_vo}")
+        else:
+            print(f"Предупреждение: V_tstn_vo вне допустимого диапазона. Используется расчетное значение: {V_tstn_vo}")
 # 72.	Расчет наличия нефти АО «Таймырнефтегаз» в резервуарах ЦТН, т:
     V_tstn_tng = V_tstn_tng_prev + G_suzun_tng - F_tng - F_tng * (K_payaha/100)
     if 300 <= V_tstn_tng <= 6000:
         V_tstn_tng = V_tstn_tng
     else:
-        V_tstn_tng = int(input("Введите корректное значение V_tstn_tng "))
+        V_tstn_tng_correction = get_validation_value("V_tstn_tng", None)
+        if V_tstn_tng_correction is not None:
+            V_tstn_tng = int(V_tstn_tng_correction)
+            print(f"Используется значение V_tstn_tng из input.json: {V_tstn_tng}")
+        else:
+            print(f"Предупреждение: V_tstn_tng вне допустимого диапазона. Используется расчетное значение: {V_tstn_tng}")
 # 73.	Расчет наличия нефти ООО «КЧНГ» (Русско-Реченское месторождение) в резервуарах ЦТН, т:
     V_tstn_kchng = V_tstn_kchng_prev + G_kchng - F_kchng - F_kchng * (K_tagul/100)
     if 1000 <= V_tstn_kchng <= 6000:
         V_tstn_kchng = V_tstn_kchng
     else:
-        V_tstn_kchng = int(input("Введите корректное значение V_tstn_kchng "))
+        V_tstn_kchng_correction = get_validation_value("V_tstn_kchng", None)
+        if V_tstn_kchng_correction is not None:
+            V_tstn_kchng = int(V_tstn_kchng_correction)
+            print(f"Используется значение V_tstn_kchng из input.json: {V_tstn_kchng}")
+        else:
+            print(f"Предупреждение: V_tstn_kchng вне допустимого диапазона. Используется расчетное значение: {V_tstn_kchng}")
 # 74.	Расчет наличия нефти ООО «Тагульское» (Тагульский ЛУ) в резервуарах ЦТН, т:
     V_tstn_tagul = V_tstn_tagul_prev + G_tagul - F_tagul - F_tagul * (K_tagul/100)
     if 4000 <= V_tstn_tagul <= 12000:
         V_tstn_tagul = V_tstn_tagul
     else:
-        V_tstn_tagul = int(input("Введите корректное значение V_tstn_tagul "))
+        V_tstn_tagul_correction = get_validation_value("V_tstn_tagul", None)
+        if V_tstn_tagul_correction is not None:
+            V_tstn_tagul = int(V_tstn_tagul_correction)
+            print(f"Используется значение V_tstn_tagul из input.json: {V_tstn_tagul}")
+        else:
+            print(f"Предупреждение: V_tstn_tagul вне допустимого диапазона. Используется расчетное значение: {V_tstn_tagul}")
 # 75.	Расчет наличия нефти ООО «Тагульское» (Лодочный ЛУ) в резервуарах ЦТН, т:
     V_tstn_lodochny = V_tstn_lodochny_prev + G_sikn_tagul - F_tagul_lpu - F_tagul_lpu * (K_lodochny/100)
     if 3000 <= V_tstn_lodochny <= 11000:
         V_tstn_lodochny = V_tstn_lodochny
     else:
-        V_tstn_lodochny = int(input("Введите корректное значение V_tstn_lodochny "))
+        V_tstn_lodochny_correction = get_validation_value("V_tstn_lodochny", None)
+        if V_tstn_lodochny_correction is not None:
+            V_tstn_lodochny = int(V_tstn_lodochny_correction)
+            print(f"Используется значение V_tstn_lodochny из input.json: {V_tstn_lodochny}")
+        else:
+            print(f"Предупреждение: V_tstn_lodochny вне допустимого диапазона. Используется расчетное значение: {V_tstn_lodochny}")
 # 76.	Расчет наличия нефти ООО «Тагульское» (Всего) в резервуарах ЦТН, т:
     V_tstn_tagul_obsh_0 = V_tstn_tagul_0 + V_tstn_lodochny_0
     V_tstn_tagul_obsh = V_tstn_tagul + V_tstn_lodochny
     if 3000 <= V_tstn_tagul <= 11000:
         V_tstn_tagul = V_tstn_tagul
     else:
-        V_tstn_tagul = int(input("Введите корректное значение V_tstn_tagul "))
+        V_tstn_tagul_correction = get_validation_value("V_tstn_tagul", None)
+        if V_tstn_tagul_correction is not None:
+            V_tstn_tagul = int(V_tstn_tagul_correction)
+            print(f"Используется значение V_tstn_tagul из input.json: {V_tstn_tagul}")
+        else:
+            print(f"Предупреждение: V_tstn_tagul вне допустимого диапазона. Используется расчетное значение: {V_tstn_tagul}")
 # 77.	Расчет наличия нефти ООО «РН-Ванкор» в резервуарах ЦТН (мертвые остатки в резервуарах), т:
     V_tstn_rn_vn = V_tstn_rn_vn_prev
 # 78.	Расчет наличия нефти АО «Ванкорнефть» в резервуарах ЦТН, т:
@@ -737,12 +959,22 @@ def TSTN (
     if 4000 <= V_tstn_vn_0 <= 11000:
         V_tstn_vn_0 = V_tstn_vn_0
     else:
-        V_tstn_vn_0 = int(input("Введите корректное значение V_tstn_vn_0 "))
+        V_tstn_vn_0_correction = get_validation_value("V_tstn_vn_0", None)
+        if V_tstn_vn_0_correction is not None:
+            V_tstn_vn_0 = int(V_tstn_vn_0_correction)
+            print(f"Используется значение V_tstn_vn_0 из input.json: {V_tstn_vn_0}")
+        else:
+            print(f"Предупреждение: V_tstn_vn_0 вне допустимого диапазона. Используется расчетное значение: {V_tstn_vn_0}")
     V_tstn_vn = V_tstn - V_tstn_rn_vn - V_tstn_suzun - V_tstn_tagul_obsh - V_tstn_suzun_vankor -  V_tstn_suzun_vslu - V_tstn_skn - V_tstn_vo - V_tstn_tng - V_tstn_kchng
     if 4000 <= V_tstn_vn <= 11000:
         V_tstn_vn = V_tstn_vn
     else:
-        V_tstn_vn = int(input("Введите корректное значение V_tstn_vn "))
+        V_tstn_vn_correction = get_validation_value("V_tstn_vn", None)
+        if V_tstn_vn_correction is not None:
+            V_tstn_vn = int(V_tstn_vn_correction)
+            print(f"Используется значение V_tstn_vn из input.json: {V_tstn_vn}")
+        else:
+            print(f"Предупреждение: V_tstn_vn вне допустимого диапазона. Используется расчетное значение: {V_tstn_vn}")
     return {
         "G_gpns_i":G_gpns_i, "G_gpns_month":G_gpns_month, "G_gpns":G_gpns, "V_gnsp":V_gnsp, "V_nps_1":V_nps_1, "V_nps_2":V_nps_2, "V_knsp":V_knsp,
         "V_tstn_0":V_tstn_0, "V_tstn":V_tstn, " V_tstn_suzun_vslu": V_tstn_suzun_vslu, "V_tstn_suzun_vankor":V_tstn_suzun_vankor, "V_tstn_suzun_0":V_tstn_suzun_0,

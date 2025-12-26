@@ -1,3 +1,56 @@
+"""
+МОДУЛЬ ПОДГОТОВКИ ДАННЫХ ДЛЯ РАСЧЕТОВ
+
+Этот модуль извлекает данные из master_df и формирует словари аргументов
+для функций расчета из calculate.py.
+
+ЛОГИКА РАБОТЫ:
+---------------
+1. КЭШИРОВАНИЕ (init_monthly_cache):
+   - Предфильтрует master_df по месяцам для ускорения доступа
+   - Создает индекс по дате для быстрого поиска дневных значений
+   - Вызывается один раз в main.py перед циклом по дням
+
+2. БЕЗОПАСНОЕ ПОЛУЧЕНИЕ ДАННЫХ:
+   
+   a) _safe_get_month_values() - месячные данные:
+      - Сначала проверяет input.json (раздел monthly_data)
+      - Если в input.json указано одно число - использует его для всех дней
+      - Если указан массив - возвращает массив numpy
+      - Если null - берет из master_df (через кэш или напрямую)
+      - Если колонка отсутствует - возвращает значение по умолчанию (пустой массив)
+   
+   b) _safe_get_day_value() - дневные данные:
+      - Сначала проверяет input.json (monthly_data с массивом)
+      - Если массив - берет значение по индексу дня месяца (день 1 = индекс 0)
+      - Если одно число - использует его для всех дней
+      - Если null - берет из master_df (через кэшированный индекс)
+      - Если колонка отсутствует - возвращает значение по умолчанию (0.0)
+
+3. ФУНКЦИИ ПОДГОТОВКИ ДАННЫХ:
+   Каждая функция prepare_*_data() собирает данные для соответствующего блока:
+   
+   - prepare_suzun_data() - данные для блока СУЗУН
+   - prepare_vo_data() - данные для блока ВОСТОК ОЙЛ
+   - prepare_kchng_data() - данные для блока КЧНГ
+   - prepare_lodochny_data() - данные для блока ЛОДОЧНЫЙ
+   - prepare_cppn1_data() - данные для блока ЦППН-1
+   - prepare_rn_vankor_data() - данные для блока РН-ВАНКОР
+   - prepare_sikn_1208_data() - данные для блока СИКН-1208
+   - prepare_TSTN_data() - данные для блока ТСТН
+
+ПРИОРИТЕТ ИСТОЧНИКОВ ДАННЫХ:
+----------------------------
+1. input.json (monthly_data) - если значение указано явно (не null)
+2. master_df (через кэш) - если значение в input.json = null
+3. Значение по умолчанию - если колонка отсутствует в master_df
+
+ОПТИМИЗАЦИЯ:
+------------
+- Кэш месячных данных (_monthly_cache) - предфильтрованные DataFrames по месяцам
+- Кэш индексированного DataFrame (_master_df_indexed) - для быстрого поиска по дате
+- Кэш предупреждений (_warning_cache) - чтобы не повторять одно и то же предупреждение
+"""
 import numpy as np
 import pandas as pd
 import json
@@ -9,6 +62,13 @@ from pathlib import Path
 
 # Кэш для конфигурации из input.json
 _input_config_cache = None
+
+# Кэш для месячных данных (оптимизация производительности)
+_monthly_cache = None
+_master_df_indexed = None
+
+# Кэш для выведенных предупреждений (чтобы не повторять одно и то же)
+_warning_cache = set()
 
 def _get_input_config():
     """Загружает конфигурацию из input.json."""
@@ -26,10 +86,60 @@ def _get_input_config():
             _input_config_cache = {}
     return _input_config_cache
 
-def _safe_get_month_values(master_df, month, column_name, default=np.array([])):
-    """Безопасное получение месячных значений из DataFrame.
+
+def init_monthly_cache(master_df):
+    """
+    Инициализирует кэш месячных данных для оптимизации производительности.
     
-    Сначала проверяет input.json, затем master_df.
+    Эта функция должна быть вызвана один раз в main.py перед циклом по дням.
+    
+    Args:
+        master_df: Исходный DataFrame с данными
+    """
+    global _monthly_cache, _master_df_indexed
+    
+    if _monthly_cache is not None:
+        return  # Кэш уже инициализирован
+    
+    # Создаем копию DataFrame с индексом по дате для быстрого доступа
+    _master_df_indexed = master_df.copy()
+    if "date" not in _master_df_indexed.columns:
+        raise ValueError("master_df должен содержать колонку 'date'")
+    
+    _master_df_indexed["date"] = pd.to_datetime(_master_df_indexed["date"]).dt.normalize()
+    
+    # Предфильтруем данные по месяцам
+    _monthly_cache = {}
+    for month in range(1, 13):
+        month_mask = _master_df_indexed["date"].dt.month == month
+        if month_mask.any():
+            _monthly_cache[month] = _master_df_indexed[month_mask].copy()
+    
+    print(f"Кэш месячных данных инициализирован для {len(_monthly_cache)} месяцев")
+
+def _safe_get_month_values(master_df, month, column_name, default=np.array([])):
+    """
+    Безопасное получение месячных значений из DataFrame.
+    
+    ПРИОРИТЕТ ИСТОЧНИКОВ:
+    1. input.json (monthly_data) - если значение указано явно (не null)
+    2. Кэш месячных данных (_monthly_cache) - если доступен
+    3. master_df напрямую - если кэш не доступен
+    4. Значение по умолчанию - если колонка отсутствует
+    
+    Args:
+        master_df: Основной DataFrame с данными
+        month: Номер месяца (1-12)
+        column_name: Имя колонки для извлечения
+        default: Значение по умолчанию (пустой numpy array)
+    
+    Returns:
+        numpy.ndarray: Массив значений за указанный месяц
+    
+    ПРИМЕРЫ:
+    - Если в input.json: "gtm_vn": 1000.0 -> вернет array([1000.0])
+    - Если в input.json: "gtm_vn": [1000, 1100, ...] -> вернет array([1000, 1100, ...])
+    - Если в input.json: "gtm_vn": null -> возьмет из master_df
     """
     # Проверяем input.json для месячных данных
     config = _get_input_config()
@@ -46,12 +156,33 @@ def _safe_get_month_values(master_df, month, column_name, default=np.array([])):
         else:
             return np.array([float(value)], dtype=float)
     
-    # Если в input.json нет, используем master_df
+    # Используем кэш месячных данных, если он доступен (оптимизация)
+    global _monthly_cache, _master_df_indexed
+    if _monthly_cache is not None and month in _monthly_cache:
+        month_df = _monthly_cache[month]
+        if column_name in month_df.columns:
+            try:
+                return month_df[column_name].values
+            except Exception as e:
+                print(f"Ошибка при получении '{column_name}' из кэша для месяца {month}: {e}")
+                return default
+        else:
+            # Колонка отсутствует в кэше, используем значение по умолчанию
+            return default
+    
+    # Если кэш не доступен, используем master_df напрямую (fallback)
+    # НО: если данные уже были в input.json, предупреждение не нужно
     if column_name not in master_df.columns:
-        available_cols = list(master_df.columns)[:20]  # Показываем первые 20 колонок
-        print(f"Предупреждение: колонка '{column_name}' отсутствует в master_df.")
-        print(f"Доступные колонки (первые 20): {available_cols}")
-        print(f"Используется значение по умолчанию: {default}")
+        # Проверяем, были ли данные в input.json (если да, предупреждение не нужно)
+        config = _get_input_config()
+        monthly_data = config.get("monthly_data", {})
+        if column_name not in monthly_data or monthly_data[column_name] is None:
+            # Данных нет ни в input.json, ни в master_df - выводим предупреждение
+            warning_key = f"missing_column_{column_name}"
+            global _warning_cache
+            if warning_key not in _warning_cache:
+                _warning_cache.add(warning_key)
+                print(f"Предупреждение: колонка '{column_name}' отсутствует в master_df. Используется значение по умолчанию: {default}")
         return default
     try:
         return master_df.loc[master_df["date"].dt.month == month, column_name].values
@@ -61,12 +192,76 @@ def _safe_get_month_values(master_df, month, column_name, default=np.array([])):
 
 
 def _safe_get_day_value(master_df, date, column_name, default=0.0):
-    """Безопасное получение дневного значения из DataFrame."""
-    if column_name not in master_df.columns:
-        print(f"Предупреждение: колонка '{column_name}' отсутствует в master_df. Используется значение по умолчанию: {default}")
+    """
+    Безопасное получение дневного значения из DataFrame.
+    
+    ПРИОРИТЕТ ИСТОЧНИКОВ:
+    1. input.json (monthly_data с массивом) - если указан массив, берет значение по индексу дня
+    2. input.json (monthly_data с числом) - если указано одно число, использует для всех дней
+    3. Кэшированный DataFrame (_master_df_indexed) - если доступен (оптимизация)
+    4. master_df напрямую - если кэш не доступен
+    5. Значение по умолчанию - если колонка отсутствует
+    
+    Args:
+        master_df: Основной DataFrame с данными
+        date: Дата для извлечения значения (datetime или Timestamp)
+        column_name: Имя колонки для извлечения
+        default: Значение по умолчанию (0.0)
+    
+    Returns:
+        float: Значение за указанную дату
+    
+    ПРИМЕРЫ:
+    - Если в input.json: "gtm_vn": [1000, 1100, 1200, ...] и date = 2025-12-03
+      -> вернет 1200 (индекс 2 для дня 3)
+    - Если в input.json: "gtm_vn": 1000.0 -> вернет 1000.0 для всех дней
+    - Если в input.json: "gtm_vn": null -> возьмет из master_df
+    """
+    # Проверяем input.json для дневных данных (через monthly_data с массивом)
+    config = _get_input_config()
+    monthly_data = config.get("monthly_data", {})
+    
+    if column_name in monthly_data and monthly_data[column_name] is not None:
+        value = monthly_data[column_name]
+        # Если это массив, берем значение по индексу дня месяца
+        if isinstance(value, list) and len(value) > 0:
+            # Определяем день месяца
+            if isinstance(date, pd.Timestamp):
+                day_index = date.day - 1  # Индекс в массиве (0-based)
+            else:
+                date_obj = pd.to_datetime(date).normalize()
+                day_index = date_obj.day - 1
+            
+            if 0 <= day_index < len(value):
+                val = value[day_index]
+                return float(val) if val is not None and pd.notna(val) else default
+            # Если индекс выходит за границы, используем последнее значение или default
+            return float(value[-1]) if value[-1] is not None and pd.notna(value[-1]) else default
+        # Если это одно число, используем его для всех дней
+        elif isinstance(value, (int, float)):
+            return float(value)
+    
+    global _master_df_indexed
+    
+    # Используем кэшированный DataFrame с индексом, если доступен
+    df_to_use = _master_df_indexed if _master_df_indexed is not None else master_df
+    
+    if column_name not in df_to_use.columns:
+        # Проверяем, были ли данные в input.json (если да, предупреждение не нужно)
+        config = _get_input_config()
+        monthly_data = config.get("monthly_data", {})
+        if column_name not in monthly_data or monthly_data[column_name] is None:
+            # Данных нет ни в input.json, ни в master_df - выводим предупреждение
+            warning_key = f"missing_column_day_{column_name}"
+            global _warning_cache
+            if warning_key not in _warning_cache:
+                _warning_cache.add(warning_key)
+                print(f"Предупреждение: колонка '{column_name}' отсутствует в master_df. Используется значение по умолчанию: {default}")
         return default
     try:
-        values = master_df.loc[master_df["date"] == date, column_name].values
+        # Нормализуем дату для сравнения
+        date_normalized = pd.to_datetime(date).normalize() if not isinstance(date, pd.Timestamp) else date.normalize()
+        values = df_to_use.loc[df_to_use["date"] == date_normalized, column_name].values
         if len(values) > 0:
             val = values[0]
             return float(val) if pd.notna(val) else default
@@ -147,8 +342,34 @@ def prepare_kchng_data(master_df, n, m):
 
 
 def prepare_lodochny_data(master_df, n, m, prev_days, prev_month, N, day, kchng_results):
-    Q_tagulsk_prev_month = _safe_get_day_value(master_df, prev_month, "gtm_tagulsk")
-    G_lodochni_upsv_yu_prev_month = _safe_get_day_value(master_df, prev_month, "lodochni_upsv_yu")
+    # Проверяем input.json для значений предыдущего месяца
+    config = _get_input_config()
+    lodochny_config = config.get("lodochny", {})
+    
+    # Получаем значения из master_df
+    Q_tagulsk_prev_month_df = _safe_get_day_value(master_df, prev_month, "gtm_tagulsk", default=0.0)
+    G_lodochni_upsv_yu_prev_month_df = _safe_get_day_value(master_df, prev_month, "lodochni_upsv_yu", default=0.0)
+    
+    # Используем значения из input.json, если они заданы явно (не null)
+    # Иначе используем значение из master_df
+    # Если значение из master_df равно 0, используем значение по умолчанию
+    Q_tagulsk_prev_month = lodochny_config.get("Q_tagul_prev_month")
+    if Q_tagulsk_prev_month is None:
+        # Значение не задано в input.json, используем из master_df
+        Q_tagulsk_prev_month = Q_tagulsk_prev_month_df
+        # Если значение из master_df равно 0, используем значение по умолчанию
+        if Q_tagulsk_prev_month == 0.0:
+            Q_tagulsk_prev_month = 1000.0  # Значение по умолчанию
+            print(f"Предупреждение: Q_tagul_prev_month из master_df равно 0, используется значение по умолчанию: {Q_tagulsk_prev_month}")
+    
+    G_lodochni_upsv_yu_prev_month = lodochny_config.get("G_lodochni_upsv_yu_prev_month")
+    if G_lodochni_upsv_yu_prev_month is None:
+        # Значение не задано в input.json, используем из master_df
+        G_lodochni_upsv_yu_prev_month = G_lodochni_upsv_yu_prev_month_df
+        # Если значение из master_df равно 0, используем значение по умолчанию
+        if G_lodochni_upsv_yu_prev_month == 0.0:
+            G_lodochni_upsv_yu_prev_month = 100.0  # Значение по умолчанию
+            print(f"Предупреждение: G_lodochni_upsv_yu_prev_month из master_df равно 0, используется значение по умолчанию: {G_lodochni_upsv_yu_prev_month}")
     Q_tagulsk = _safe_get_month_values(master_df, m, "gtm_tagulsk")
     Q_lodochny = _safe_get_month_values(master_df, m, "gtm_lodochny")
     Q_lodochny_day = _safe_get_day_value(master_df, n, "gtm_lodochny")

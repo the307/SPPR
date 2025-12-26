@@ -1,3 +1,52 @@
+"""
+МОДУЛЬ ЗАГРУЗКИ ДАННЫХ
+
+Этот модуль отвечает за загрузку исходных данных из различных источников:
+1. Excel файлы (через config.py настройки)
+2. Ручные данные (из manual_data.py)
+
+ЛОГИКА РАБОТЫ:
+---------------
+1. load_excel() - загружает один Excel файл:
+   - Читает указанный лист и колонки
+   - Транспонирует данные (если нужно)
+   - Парсит даты (поддерживает формат "Месяц, YYYY")
+   - Удаляет ненужные строки
+   - Возвращает DataFrame с колонками: date, value
+
+2. processing_data() - обрабатывает файл по ключу:
+   - Использует настройки из EXCEL_SETTINGS
+   - Может обрабатывать несколько файлов (список в FILE_NAMES)
+   - Добавляет метаданные: param (ключ), source_file (имя файла)
+
+3. build_master_table() - создает широкую таблицу:
+   - Преобразует длинный формат (date, param, value) в широкий (date, param1, param2, ...)
+   - Использует pivot_table для группировки по дате и параметру
+
+4. build_all_data() - главная функция:
+   - Загружает все Excel файлы (с обработкой ошибок)
+   - Добавляет ручные данные из manual_data.py
+   - Объединяет все в единый master_df
+
+СТРУКТУРА ДАННЫХ:
+-----------------
+Длинный формат (промежуточный):
+  date | param | value | source_file
+  -----|-------|-------|------------
+  2025-12-01 | gtm_vn | 1000 | ГТМ_ВН_декабрь.XLSX
+
+Широкий формат (master_df):
+  date | gtm_vn | gtm_suzun | buying_oil | ...
+  -----|--------|-----------|------------|----
+  2025-12-01 | 1000 | 500 | 2000 | ...
+
+ОБРАБОТКА ОШИБОК:
+-----------------
+- Если файл не найден, ошибка собирается в список
+- Все ошибки выводятся одним блоком в конце
+- Программа продолжает работу с доступными данными
+- Отсутствующие колонки заполняются значениями по умолчанию (0.0)
+"""
 import pandas as pd
 from datetime import datetime, timedelta
 import calendar
@@ -141,15 +190,75 @@ def build_master_table(long_df: pd.DataFrame) -> pd.DataFrame:
 # Полная сборка всех данных
 # -------------------------
 def build_all_data() -> pd.DataFrame:
+    """
+    Главная функция загрузки всех данных.
+    
+    ОБЪЕДИНЯЕТ:
+    1. Данные из Excel файлов (через processing_data) - ТОЛЬКО если их нет в input.json
+    2. Ручные данные (из manual_data.py)
+    
+    ПРИОРИТЕТ:
+    - Если поле есть в input.json (monthly_data) с не-null значением, Excel файл НЕ загружается
+    - Если поля нет в input.json или значение = null, пытается загрузить из Excel
+    
+    ОБРАБОТКА ОШИБОК:
+    - Собирает все ошибки загрузки в список
+    - Выводит их одним блоком в конце
+    - Продолжает работу с доступными данными
+    
+    Returns:
+        pd.DataFrame: Широкая таблица (master_df) с колонками по параметрам
+    
+    СТРУКТУРА master_df:
+    - Колонка 'date' - даты
+    - Остальные колонки - параметры (gtm_vn, gtm_suzun, buying_oil, ...)
+    - Значения - числовые данные за соответствующие даты
+    """
+    import json
+    from pathlib import Path
+    
     from manual_data import manual_dfs
     all_frames = []
-    # 1. Excel
+    load_errors = []  # Собираем все ошибки загрузки
+    skipped_keys = []  # Ключи, пропущенные из-за наличия в input.json
+    
+    # Проверяем input.json для определения, какие файлы нужно загружать
+    input_config = {}
+    input_file = Path("input.json")
+    if input_file.exists():
+        try:
+            with open(input_file, 'r', encoding='utf-8') as f:
+                input_config = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            pass
+    
+    monthly_data = input_config.get("monthly_data", {})
+    
+    # 1. Excel - загружаем только те файлы, которых нет в input.json
     for key in EXCEL_SETTINGS.keys():
+        # Проверяем, есть ли это поле в input.json с не-null значением
+        if key in monthly_data and monthly_data[key] is not None:
+            skipped_keys.append(key)
+            continue  # Пропускаем загрузку Excel, данные будут из input.json
+        
         try:
             df_excel = processing_data(key)
             all_frames.append(df_excel)
         except Exception as e:
-            print(f"Ошибка при загрузке '{key}': {e}")
+            load_errors.append((key, str(e)))
+    # Выводим информацию о пропущенных файлах (данные из input.json)
+    if skipped_keys:
+        print(f"\n✓ Пропущена загрузка {len(skipped_keys)} файлов (данные из input.json):")
+        for key in skipped_keys:
+            print(f"   - '{key}'")
+        print()
+    
+    # Выводим все ошибки загрузки одним блоком
+    if load_errors:
+        print(f"⚠️  Ошибки загрузки файлов ({len(load_errors)} файлов):")
+        for key, error in load_errors:
+            print(f"   - '{key}': {error}")
+        print("   Используются значения по умолчанию для отсутствующих данных.\n")
     # 2. Manual
     for df in manual_dfs.values():
         all_frames.append(df)

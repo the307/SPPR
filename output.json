@@ -1,0 +1,7540 @@
+{
+  "G_per_month": 8531.451612903225,
+  "Q_vankor_month": 201500.0,
+  "Q_suzun_month": 139500.0,
+  "Q_vslu_month": 124000.0,
+  "Q_tng_month": 93000.0,
+  "Q_vo_month": 83700.0,
+  "G_suzun_vslu_month": 13250.0,
+  "G_suzun_slu_month": 8082.0,
+  "G_suzun_month": 45202.0,
+  "delta_G_suzun": null,
+  "G_upn_lodochny_ichem_month": null,
+  "Q_kchng_month": 48050.0,
+  "G_kchng_month": 10050.0,
+  "Q_tagulsk_month": 108500.0,
+  "Q_lodochny_month": 102300.0,
+  "K_otkachki_month": 0.1,
+  "G_lodochny_uspv_yu": 92070.0,
+  "G_upn_lodochny_month": 620.0,
+  "G_tagul_month": 26700.0,
+  "delta_G_tagul_month": null,
+  "G_tagul_lodochny_month": 19730.0,
+  "G_lodochny_month": 15530.0,
+  "G_sikn_vslu_month": 16350.0,
+  "G_sikn_tagul_month": 10030.0,
+  "G_sikn_suzun_month": 16740.064516129034,
+  "G_sikn_tng_month": 9300.0,
+  "G_sikn_month": 60014.967741935485,
+  "G_sikn_vankor_month": 18674.90322580645,
+  "G_skn_month": 18600.0,
+  "delta_G_sikn_month": null,
+  "F_suzun_vankor_month": 54250.0,
+  "F_suzun_vslu_month": 48050.0,
+  "F_tagul_lpu_month": 42425.0,
+  "F_tagul_tpu_month": 39650.0,
+  "F_tagul_month": 82075.0,
+  "F_skn_month": 35530.0,
+  "F_vo_month": 18600.0,
+  "F_tng_month": null,
+  "F_kchng_month": 15500.0,
+  "F_month": 250830.0,
+  "G_gnps_month": null,
+  "F_sr": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_vn_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_suzun_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_lodochny_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_vo_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_tagul_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_vn_gtm_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_suzun_gtm_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_vo_gtm_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_lodochny_gtm_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "V_tagul_gtm_check": {
+    "value": null,
+    "status": 0,
+    "message": ""
+  },
+  "days": [
+    {
+      "date": "2025-12-01",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 9464.967741935483,
+      "G_sikn_vankor": -3995.096774193549,
+      "G_sikn_suzun": 3510.064516129032,
+      "G_sikn_vslu": 2500.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 3452.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 2500.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2000.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 1620.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 1380.0,
+      "G_lodochny": 1380.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 4180.0,
+      "Q_kchng": null,
+      "G_kchng": 800.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12836.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9950.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16347.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3210.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4060.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-02",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 9754.967741935483,
+      "G_sikn_vankor": -3815.096774193549,
+      "G_sikn_suzun": 3610.064516129032,
+      "G_sikn_vslu": 2600.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 3552.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 2600.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2100.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 1710.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 1490.0,
+      "G_lodochny": 1490.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 4440.0,
+      "Q_kchng": null,
+      "G_kchng": 850.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12826.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9960.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16357.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3220.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4110.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-03",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 10044.967741935483,
+      "G_sikn_vankor": -3625.096774193549,
+      "G_sikn_suzun": 3710.064516129032,
+      "G_sikn_vslu": 2700.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 3652.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 2700.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2200.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 1800.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 1600.0,
+      "G_lodochny": 1600.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 4700.0,
+      "Q_kchng": null,
+      "G_kchng": 900.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12826.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9960.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16357.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3220.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4160.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-04",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 10334.967741935483,
+      "G_sikn_vankor": -3435.096774193549,
+      "G_sikn_suzun": 3810.064516129032,
+      "G_sikn_vslu": 2800.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 3752.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 2800.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2300.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 1890.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 1710.0,
+      "G_lodochny": 1710.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 4960.0,
+      "Q_kchng": null,
+      "G_kchng": 950.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12826.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9960.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16357.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3220.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4210.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-05",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 10624.967741935483,
+      "G_sikn_vankor": -3245.096774193549,
+      "G_sikn_suzun": 3910.064516129032,
+      "G_sikn_vslu": 2900.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 3852.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 2900.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2400.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 1980.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 1820.0,
+      "G_lodochny": 1820.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 5220.0,
+      "Q_kchng": null,
+      "G_kchng": 1000.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12826.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9960.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16357.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3220.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4260.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-06",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 10914.967741935483,
+      "G_sikn_vankor": -3065.096774193549,
+      "G_sikn_suzun": 4010.064516129032,
+      "G_sikn_vslu": 3000.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 3952.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 3000.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2500.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2070.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 1930.0,
+      "G_lodochny": 1930.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 5480.0,
+      "Q_kchng": null,
+      "G_kchng": 1050.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12816.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9970.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16367.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3230.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4310.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-07",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 11204.967741935483,
+      "G_sikn_vankor": -2875.09677419355,
+      "G_sikn_suzun": 4110.064516129033,
+      "G_sikn_vslu": 3100.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 4052.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 3100.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2600.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2160.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 2040.0,
+      "G_lodochny": 2040.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 5740.0,
+      "Q_kchng": null,
+      "G_kchng": 1100.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12816.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9970.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16367.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3230.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4360.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 12600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 3000.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 2500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-08",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 11494.967741935483,
+      "G_sikn_vankor": -2685.09677419355,
+      "G_sikn_suzun": 4210.064516129033,
+      "G_sikn_vslu": 3200.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 4152.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 3200.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2700.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2250.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 2150.0,
+      "G_lodochny": 2150.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 6000.0,
+      "Q_kchng": null,
+      "G_kchng": 1150.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12816.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9970.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16367.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3230.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4410.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-09",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 11784.967741935483,
+      "G_sikn_vankor": -2505.09677419355,
+      "G_sikn_suzun": 4310.064516129033,
+      "G_sikn_vslu": 3300.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 4252.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 3300.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2800.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2340.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 2260.0,
+      "G_lodochny": 2260.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 6260.0,
+      "Q_kchng": null,
+      "G_kchng": 1200.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12806.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9980.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16377.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4460.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-10",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 12074.967741935483,
+      "G_sikn_vankor": -2315.09677419355,
+      "G_sikn_suzun": 4410.064516129033,
+      "G_sikn_vslu": 3400.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 4352.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 3400.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 2900.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2430.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 2370.0,
+      "G_lodochny": 2370.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 6520.0,
+      "Q_kchng": null,
+      "G_kchng": 1250.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12806.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9980.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16377.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4510.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-11",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 12364.967741935483,
+      "G_sikn_vankor": -2125.09677419355,
+      "G_sikn_suzun": 4510.064516129033,
+      "G_sikn_vslu": 3500.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 4452.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 3500.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3000.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2520.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 2480.0,
+      "G_lodochny": 2480.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 6780.0,
+      "Q_kchng": null,
+      "G_kchng": 1300.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12806.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9980.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16377.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4560.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-12",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 12612.967741935483,
+      "G_sikn_vankor": -1977.0967741935501,
+      "G_sikn_suzun": 4610.064516129033,
+      "G_sikn_vslu": 3600.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 4552.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 3600.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3100.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2610.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 2590.0,
+      "G_lodochny": 2590.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 7040.0,
+      "Q_kchng": null,
+      "G_kchng": 1350.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12806.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9980.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 466.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16377.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4610.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-13",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 12930.967741935483,
+      "G_sikn_vankor": -1797.0967741935501,
+      "G_sikn_suzun": 4738.064516129033,
+      "G_sikn_vslu": 3700.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 4680.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 3700.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3200.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2700.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 2700.0,
+      "G_lodochny": 2700.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 7300.0,
+      "Q_kchng": null,
+      "G_kchng": 1400.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12810.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9990.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16387.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3250.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4660.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-14",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 13220.967741935483,
+      "G_sikn_vankor": -1607.0967741935501,
+      "G_sikn_suzun": 4838.064516129033,
+      "G_sikn_vslu": 3800.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 4780.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 3800.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3300.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2790.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 2810.0,
+      "G_lodochny": 2810.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 7560.0,
+      "Q_kchng": null,
+      "G_kchng": 1450.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12810.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9990.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16387.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3250.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4710.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 12600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 3000.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 2500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-15",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 13510.967741935483,
+      "G_sikn_vankor": -1417.0967741935501,
+      "G_sikn_suzun": 4938.064516129033,
+      "G_sikn_vslu": 3900.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 4880.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 3900.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3400.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2880.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 2920.0,
+      "G_lodochny": 2920.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 7820.0,
+      "Q_kchng": null,
+      "G_kchng": 1500.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12810.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9990.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16387.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3250.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4760.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-16",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 13800.967741935483,
+      "G_sikn_vankor": -1237.0967741935501,
+      "G_sikn_suzun": 5038.064516129033,
+      "G_sikn_vslu": 4000.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 4980.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 4000.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3500.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 2970.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 3030.0,
+      "G_lodochny": 3030.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 8080.0,
+      "Q_kchng": null,
+      "G_kchng": 1550.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12800.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10000.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16397.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4810.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-17",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 14090.967741935483,
+      "G_sikn_vankor": -1047.0967741935501,
+      "G_sikn_suzun": 5138.064516129033,
+      "G_sikn_vslu": 4100.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 5080.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 4100.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3600.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3060.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 3140.0,
+      "G_lodochny": 3140.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 8340.0,
+      "Q_kchng": null,
+      "G_kchng": 1600.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12800.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10000.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16397.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4860.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-18",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 14380.967741935483,
+      "G_sikn_vankor": -857.0967741935501,
+      "G_sikn_suzun": 5238.064516129033,
+      "G_sikn_vslu": 4200.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 5180.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 4200.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3700.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3150.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 3250.0,
+      "G_lodochny": 3250.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 8600.0,
+      "Q_kchng": null,
+      "G_kchng": 1650.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12800.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10000.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16397.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4910.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-19",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 14670.967741935483,
+      "G_sikn_vankor": -667.0967741935501,
+      "G_sikn_suzun": 5338.064516129033,
+      "G_sikn_vslu": 4300.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 5280.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 4300.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3800.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3240.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 3360.0,
+      "G_lodochny": 3360.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 8860.0,
+      "Q_kchng": null,
+      "G_kchng": 1700.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12800.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10000.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16397.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 4960.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-20",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 14960.967741935483,
+      "G_sikn_vankor": -487.0967741935501,
+      "G_sikn_suzun": 5438.064516129033,
+      "G_sikn_vslu": 4400.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 5380.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 4400.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 3900.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3330.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 3470.0,
+      "G_lodochny": 3470.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 9120.0,
+      "Q_kchng": null,
+      "G_kchng": 1750.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12790.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10010.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16407.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3270.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5010.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-21",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 15250.967741935483,
+      "G_sikn_vankor": -297.0967741935501,
+      "G_sikn_suzun": 5538.064516129033,
+      "G_sikn_vslu": 4500.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 5480.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 4500.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4000.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3420.0,
+      "V_lodochny": -240.0,
+      "G_upn_lodochny": 3580.0,
+      "G_lodochny": 3580.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 9380.0,
+      "Q_kchng": null,
+      "G_kchng": 1800.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12790.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10010.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 480.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16407.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3270.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5060.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 12600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 3000.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 2500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-22",
+      "Q_vankor": null,
+      "V_cppn_1": 720.0,
+      "G_sikn": 15582.967741935483,
+      "G_sikn_vankor": -65.09677419355012,
+      "G_sikn_suzun": 5638.064516129033,
+      "G_sikn_vslu": 4600.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -240.0,
+      "V_suzun_vslu": 240.0,
+      "V_suzun_tng": 240.0,
+      "G_suzun": 5580.0,
+      "G_suzun_slu": 980.0,
+      "G_suzun_vslu": 4600.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4100.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3510.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 3690.0,
+      "G_lodochny": 3690.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 9640.0,
+      "Q_kchng": null,
+      "G_kchng": 1850.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12790.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10010.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 240.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 466.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16407.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3270.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5110.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-23",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 15844.967741935483,
+      "G_sikn_vankor": 114.90322580644988,
+      "G_sikn_suzun": 5710.064516129033,
+      "G_sikn_vslu": 4700.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 5652.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 4700.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4200.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3600.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 3800.0,
+      "G_lodochny": 3800.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 9900.0,
+      "Q_kchng": null,
+      "G_kchng": 1900.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12766.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10020.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16417.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3280.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5160.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-24",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 16134.967741935483,
+      "G_sikn_vankor": 304.9032258064499,
+      "G_sikn_suzun": 5810.064516129033,
+      "G_sikn_vslu": 4800.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 5752.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 4800.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4300.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3690.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 3910.0,
+      "G_lodochny": 3910.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 10160.0,
+      "Q_kchng": null,
+      "G_kchng": 1950.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12766.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10020.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16417.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3280.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5210.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-25",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 16424.967741935485,
+      "G_sikn_vankor": 494.9032258064517,
+      "G_sikn_suzun": 5910.064516129033,
+      "G_sikn_vslu": 4900.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 5852.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 4900.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4400.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3780.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 4020.0,
+      "G_lodochny": 4020.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 10420.0,
+      "Q_kchng": null,
+      "G_kchng": 2000.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12766.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10020.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16417.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3280.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5260.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-26",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 16714.967741935485,
+      "G_sikn_vankor": 684.9032258064517,
+      "G_sikn_suzun": 6010.064516129033,
+      "G_sikn_vslu": 5000.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 5952.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 5000.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4500.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3870.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 4130.0,
+      "G_lodochny": 4130.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 10680.0,
+      "Q_kchng": null,
+      "G_kchng": 2050.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12766.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10020.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16417.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3280.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5310.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-27",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 17004.967741935485,
+      "G_sikn_vankor": 864.9032258064517,
+      "G_sikn_suzun": 6110.064516129033,
+      "G_sikn_vslu": 5100.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 6052.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 5100.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4600.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 3960.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 4240.0,
+      "G_lodochny": 4240.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 10940.0,
+      "Q_kchng": null,
+      "G_kchng": 2100.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12756.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10030.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16427.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3290.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5360.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 3350.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-28",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 17294.967741935485,
+      "G_sikn_vankor": 1054.9032258064517,
+      "G_sikn_suzun": 6210.064516129033,
+      "G_sikn_vslu": 5200.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 6152.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 5200.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4700.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 4050.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 4350.0,
+      "G_lodochny": 4350.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 11200.0,
+      "Q_kchng": null,
+      "G_kchng": 2150.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12756.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10030.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16427.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3290.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5410.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 12600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1600.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 650.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": 450.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 3000.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 2500.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1450.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-29",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 17584.967741935485,
+      "G_sikn_vankor": 1244.9032258064517,
+      "G_sikn_suzun": 6310.064516129033,
+      "G_sikn_vslu": 5300.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 6252.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 5300.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4800.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 4140.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 4460.0,
+      "G_lodochny": 4460.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 11460.0,
+      "Q_kchng": null,
+      "G_kchng": 2200.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12756.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10030.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16427.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3290.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5460.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 2830.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 7750.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 575.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 900.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": -120.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1475.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-30",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 17874.967741935485,
+      "G_sikn_vankor": 1479.9032258064517,
+      "G_sikn_suzun": 6410.064516129033,
+      "G_sikn_vslu": 5400.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 6352.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 5400.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 4900.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 4230.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 4570.0,
+      "G_lodochny": 4570.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 11720.0,
+      "Q_kchng": null,
+      "G_kchng": 2250.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12801.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 9985.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16382.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3245.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5510.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 2830.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 7750.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 575.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 900.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": -120.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1475.0,
+        "status": 0,
+        "message": ""
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "Q_vankor": null,
+      "V_cppn_1": 678.0,
+      "G_sikn": 18164.967741935485,
+      "G_sikn_vankor": 1624.9032258064517,
+      "G_sikn_suzun": 6510.064516129033,
+      "G_sikn_vslu": 5500.0,
+      "G_sikn_tng": 0.0,
+      "G_delte_sikn": null,
+      "Q_suzun": null,
+      "Q_vslu": null,
+      "V_suzun_slu": -226.0,
+      "V_suzun_vslu": 226.0,
+      "V_suzun_tng": 226.0,
+      "G_suzun": 6452.0,
+      "G_suzun_slu": 952.0,
+      "G_suzun_vslu": 5500.0,
+      "G_suzun_tng": null,
+      "delta_G_suzun": null,
+      "Q_tng": null,
+      "G_payaha": null,
+      "G_buy_day": 64.51612903225806,
+      "G_out_updt_day": 58.064516129032256,
+      "G_per": 6.451612903225808,
+      "Q_tagul": null,
+      "G_tagul": 5000.0,
+      "delta_G_tagul": null,
+      "Q_lodochny": null,
+      "G_lodochny_uspv_yu": 4320.0,
+      "V_lodochny": -226.0,
+      "G_upn_lodochny": 4680.0,
+      "G_lodochny": 4680.0,
+      "G_ichem": null,
+      "delta_G_upn_lodochny": null,
+      "Q_vo": null,
+      "G_upn_lodochny_ichem": null,
+      "G_tagul_lodochny": 11980.0,
+      "Q_kchng": null,
+      "G_kchng": 2300.0,
+      "G_skn": null,
+      "G_gnps": null,
+      "V_tstn": 53040.0,
+      "V_tstn_rn_vn": 13260.0,
+      "F_tng": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun_vankor": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_nps_1_2": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "Q_knps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_yu": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upsv_s": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_cps": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_lodochny_cps_upsv_yu": {
+        "value": 12756.0,
+        "status": 0,
+        "message": ""
+      },
+      "G_sikn_tagul": {
+        "value": 10030.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_suzun": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tagul": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_upn_lodochny": {
+        "value": 226.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_ichem": {
+        "value": 452.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_gnps": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_1": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_nps_2": {
+        "value": 13260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_knsp": {
+        "value": 39500,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vn": {
+        "value": 4000,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun": {
+        "value": 13589,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vankor": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_suzun_vslu": {
+        "value": null,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul_obsh": {
+        "value": 16427.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_lodochny": {
+        "value": 3290.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tagul": {
+        "value": 13137,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_skn": {
+        "value": 0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_vo": {
+        "value": 1260.0,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_tng": {
+        "value": 13260,
+        "status": 0,
+        "message": ""
+      },
+      "V_tstn_kchng": {
+        "value": 5560.0,
+        "status": 0,
+        "message": ""
+      },
+      "F": {
+        "value": 2830.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vn": {
+        "value": 1800.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_suzun": {
+        "value": 7750.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_lpu": {
+        "value": 575.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul_tpu": {
+        "value": 900.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_skn": {
+        "value": -120.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_vo": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_kchng": {
+        "value": 0.0,
+        "status": 0,
+        "message": ""
+      },
+      "F_tagul": {
+        "value": 1475.0,
+        "status": 0,
+        "message": ""
+      }
+    }
+  ]
+}
