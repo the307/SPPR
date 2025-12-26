@@ -23,15 +23,8 @@ def export_to_excel(
 
     # =========================================================
     # 1. Исключаем служебные колонки (_data)
-    EXCLUDE_SUFFIXES = ("_data",)
-    EXCLUDE_col = {"suzun_tng","upn_suzun","suzun_slu","suzun_vslu","kchng","upn_lodochny","ichem","lodochny_ichem","lodochni_upsv_yu","tagul",
-                   "upsv_yu", "upsv_s", "upsv_cps", "lodochny_cps_upsv_yu", "ctn_suzun_vslu", "ctn_suzun_vslu_norm", "skn", "volum_kchng","nps_1",
-                   "nps_2", "knps", "tstn", "tstn_vslu", "tstn_suzun_vankor", "lodochny_upsv_yu", "suzun_put", "tstn_suzun", "tstn_skn", "_F_skn",
-                   "tstn_vo", "tstn_tng", "tstn_tagul", "tstn_kchng", "tstn_lodochny", "tstn_rn_vn"
-                   }
     export_columns = [
         col for col in master_df.columns
-        if not col.endswith(EXCLUDE_SUFFIXES) and col not in EXCLUDE_col
     ]
 
     export_df = master_df[export_columns].copy()
