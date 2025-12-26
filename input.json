@@ -1,0 +1,97 @@
+{
+  "suzun": {
+    "G_payaha": 0.0,
+    "G_suzun_tng": 0.0,
+    "K_g_suzun": 0.0,
+    "manual_V_upn_suzun": null,
+    "manual_V_suzun_vslu": null
+  },
+  "monthly_data": {
+    "buying_oil": null,
+    "out_udt": null,
+    "volume_vankor": null,
+    "volume_suzun": null,
+    "suzun_vankor": null,
+    "volume_lodochny": null,
+    "volume_tagulsk": null,
+    "volume_vostok_oil": null,
+    "volume_taymyr": null,
+    "volum_kchng": null
+  },
+  "lodochny": {
+    "G_ichem": 0.0,
+    "K_otkachki": 0.0,
+    "K_gupn_lodochny": 0.0,
+    "K_g_tagul": 0.0,
+    "manual_V_upn_lodochny": null,
+    "manual_G_sikn_tagul": null,
+    "manual_V_tagul": null
+  },
+  "cppn_1": {
+    "manual_V_upsv_yu": null,
+    "manual_V_upsv_s": null,
+    "manual_V_upsv_cps": null
+  },
+  "rn_vankor": {
+    "manual_F_bp_vn": null,
+    "manual_F_bp_suzun": null,
+    "manual_F_bp_suzun_vankor": null,
+    "manual_F_bp_tagul_tpu": null,
+    "manual_F_bp_tagul_lpu": null,
+    "manual_F_bp_skn": null,
+    "manual_F_bp_vo": null,
+    "manual_F_bp_suzun_vslu": null,
+    "manual_F_kchng": null
+  },
+  "sikn_1208": {
+    "K_delte_g_sikn": 0.0
+  },
+  "tstn": {
+    "F_suzun_vslu": 0.0,
+    "K_suzun": 0.0,
+    "K_vankor": 0.0,
+    "G_skn": 0.0,
+    "K_skn": 0.0,
+    "K_ichem": 0.0,
+    "K_payaha": 0.0,
+    "K_tagul": 0.0,
+    "K_lodochny": 0.0
+  },
+  "validation": {
+    "auto_accept_validation": false,
+    "auto_replace_K_otkachki": false,
+    "delivery_period_e_suzun_vankor": 7,
+    "delivery_period_e_vo": 7,
+    "delivery_period_e_kchng": 7
+  },
+  "manual_corrections": {
+    "V_upsv_yu": null,
+    "V_upsv_s": null,
+    "V_upsv_cps": null,
+    "V_gnsp": null,
+    "V_nps_1": null,
+    "V_nps_2": null,
+    "V_knsp": null,
+    "V_tstn_suzun_vslu": null,
+    "V_tstn_suzun_vankor": null,
+    "V_tstn_suzun_0": null,
+    "V_tstn_suzun": null,
+    "V_tstn_skn": null,
+    "V_tstn_vo": null,
+    "V_tstn_tng": null,
+    "V_tstn_kchng": null,
+    "V_tstn_tagul": null,
+    "V_tstn_lodochny": null,
+    "V_tstn_vn_0": null,
+    "V_tstn_vn": null
+  },
+  "_comment": {
+    "note": "Этот файл содержит начальные значения для всех параметров",
+    "usage": "Измените значения в этом файле вместо использования input()",
+    "null_values": "null означает, что значение будет взято из расчетов или предыдущих данных",
+    "monthly_data": "Месячные данные. Можно указать одно число (будет использовано для всех дней) или массив значений для каждого дня месяца",
+    "validation": "Параметры в разделе validation используются для автоматической валидации",
+    "manual_corrections": "Параметры в разделе manual_corrections используются только при ошибках валидации"
+  }
+}
+

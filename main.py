@@ -31,9 +31,18 @@ def main():
     master_df = build_all_data()
 
     if "date" not in master_df.columns:
-        raise ValueError("master_df не содержит колонку 'date'")
+        available_cols = list(master_df.columns)
+        raise ValueError(
+            f"master_df не содержит колонку 'date'. "
+            f"Доступные колонки: {available_cols}"
+        )
 
     master_df["date"] = pd.to_datetime(master_df["date"]).dt.normalize()
+    
+    # Выводим информацию о загруженных данных для диагностики
+    print(f"Загружено строк: {len(master_df)}")
+    print(f"Загружено колонок: {len(master_df.columns)}")
+    print(f"Колонки: {list(master_df.columns)[:30]}...")  # Первые 30 колонок
 
     dates = get_day()
     dates = [pd.to_datetime(d).normalize() for d in dates]
